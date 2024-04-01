@@ -1,0 +1,32 @@
+.footer {
+    background-color: var(--bg-footer);
+    & * {
+        color: var(--text-footer) !important;
+    }
+    &__content {
+        padding-top: 84px;
+        height: 380px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__inn {
+        display: flex;
+        flex-direction: column;
+    }
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__link {
+        color: var(--text-footer);
+    }
+    &__socials {
+        display: flex;
+        gap: 18px;
+        &-item {
+
+        }
+    }
+}
+

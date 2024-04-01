@@ -1,4 +1,29 @@
-@import "../public/font/fonts";
+@import "../../public/font/fonts";
 @import "./mixins/null-style";
+@import "../content/import_scss";
 
+:root {
+    --text-p: #323232;
+    --text-h: #57463A;
+    --bg-main: #F3EFEA;
+    --bg-footer: #715B4B;
+    --text-footer: #F6F6F6;
+}
 
+body {
+    background-color: var(--bg-main);
+}
+
+.header__content,
+.footer__content {
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "TS";
+}
+
+p, a {
+    font-family: "OS";
+}

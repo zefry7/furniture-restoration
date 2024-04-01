@@ -1,0 +1,30 @@
+.header {
+    &__content {
+        position: relative;
+        height: 140px;
+    }
+    &__links {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .header__link:nth-child(1) {
+            margin-right: 87px;
+        }
+        .header__link:nth-child(2) {
+            margin-right: 573px;
+        }
+        .header__link:nth-child(3) {
+            margin-right: 147px;
+        }
+    }
+    &__link {
+        width: max-content;
+    }
+    &__logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}

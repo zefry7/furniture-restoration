@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "OS";
+  src: url("../../public/font/OpenSans-Light.eot");
+  src: url("../../public/font/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../../public/font/OpenSans-Light.woff2") format("woff2"), url("../../public/font/OpenSans-Light.woff") format("woff"), url("../../public/font/OpenSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TS";
+  src: url("../../public/font/TenorSans.eot");
+  src: url("../../public/font/TenorSans.eot?#iefix") format("embedded-opentype"), url("../../public/font/TenorSans.woff2") format("woff2"), url("../../public/font/TenorSans.woff") format("woff"), url("../../public/font/TenorSans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 * {
   padding: 0;
   margin: 0;
@@ -74,4 +90,88 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   cursor: default;
+}
+
+.header__content {
+  position: relative;
+  height: 140px;
+}
+.header__links {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__links .header__link:nth-child(1) {
+  margin-right: 87px;
+}
+.header__links .header__link:nth-child(2) {
+  margin-right: 573px;
+}
+.header__links .header__link:nth-child(3) {
+  margin-right: 147px;
+}
+.header__link {
+  width: -moz-max-content;
+  width: max-content;
+}
+.header__logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.footer {
+  background-color: var(--bg-footer);
+}
+.footer * {
+  color: var(--text-footer) !important;
+}
+.footer__content {
+  padding-top: 84px;
+  height: 380px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__inn {
+  display: flex;
+  flex-direction: column;
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer__link {
+  color: var(--text-footer);
+}
+.footer__socials {
+  display: flex;
+  gap: 18px;
+}
+:root {
+  --text-p: #323232;
+  --text-h: #57463A;
+  --bg-main: #F3EFEA;
+  --bg-footer: #715B4B;
+  --text-footer: #F6F6F6;
+}
+
+body {
+  background-color: var(--bg-main);
+}
+
+.header__content,
+.footer__content {
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "TS";
+}
+
+p, a {
+  font-family: "OS";
 }/*# sourceMappingURL=style.css.map */
