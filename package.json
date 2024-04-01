@@ -1,6 +1,6 @@
 {
+  "name": "furniture-restoration",
   "homepage": "https://zefry7.github.io/furniture-restoration/",
-  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
