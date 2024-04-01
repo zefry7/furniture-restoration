@@ -1,4 +1,5 @@
 // import %block% from "./ts/%url%";
+import MainPage from "./MainPage/MainPage";
 
-
-// export default %block%;
+// export {%block%};
+export { MainPage };

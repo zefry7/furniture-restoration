@@ -8,8 +8,8 @@
     "target": "ES6",
     "removeComments": true,
     "module": "commonjs",
-    "outDir": "src/content/js",
+    // "outDir": "src/content/js",
   },
-  "include": ["src/content/ts/**/*"],
+  // "include": ["src/content/ts/**/*"],
   "exclude": ["node_modules", "build"]
 }
