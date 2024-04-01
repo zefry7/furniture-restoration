@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.9f4bed27.css",
-    "main.js": "/static/js/main.069bf6fc.js",
-    "static/media/OpenSans-Light.eot": "/static/media/OpenSans-Light.633c3d04bd13ba9b5d90.eot",
-    "static/media/OpenSans-Light.ttf": "/static/media/OpenSans-Light.61363a68845d9a8388b8.ttf",
-    "static/media/TenorSans.eot": "/static/media/TenorSans.92d88fcd7013fa8516c4.eot",
-    "static/media/TenorSans.ttf": "/static/media/TenorSans.15b8aa94fe2e57dc2bab.ttf",
-    "static/media/OpenSans-Light.woff": "/static/media/OpenSans-Light.ece0f6303560033ff9cb.woff",
-    "static/media/OpenSans-Light.woff2": "/static/media/OpenSans-Light.59c1a304def76fff0761.woff2",
-    "static/media/TenorSans.woff": "/static/media/TenorSans.4cf9b6132670da48a8bd.woff",
-    "static/media/TenorSans.woff2": "/static/media/TenorSans.cf47ec70e5df8abfbc1c.woff2",
-    "index.html": "/index.html",
-    "main.9f4bed27.css.map": "/static/css/main.9f4bed27.css.map",
-    "main.069bf6fc.js.map": "/static/js/main.069bf6fc.js.map"
+    "main.css": "/furniture-restoration/static/css/main.ecfabe19.css",
+    "main.js": "/furniture-restoration/static/js/main.069bf6fc.js",
+    "static/media/OpenSans-Light.eot": "/furniture-restoration/static/media/OpenSans-Light.633c3d04bd13ba9b5d90.eot",
+    "static/media/OpenSans-Light.ttf": "/furniture-restoration/static/media/OpenSans-Light.61363a68845d9a8388b8.ttf",
+    "static/media/TenorSans.eot": "/furniture-restoration/static/media/TenorSans.92d88fcd7013fa8516c4.eot",
+    "static/media/TenorSans.ttf": "/furniture-restoration/static/media/TenorSans.15b8aa94fe2e57dc2bab.ttf",
+    "static/media/OpenSans-Light.woff": "/furniture-restoration/static/media/OpenSans-Light.ece0f6303560033ff9cb.woff",
+    "static/media/OpenSans-Light.woff2": "/furniture-restoration/static/media/OpenSans-Light.59c1a304def76fff0761.woff2",
+    "static/media/TenorSans.woff": "/furniture-restoration/static/media/TenorSans.4cf9b6132670da48a8bd.woff",
+    "static/media/TenorSans.woff2": "/furniture-restoration/static/media/TenorSans.cf47ec70e5df8abfbc1c.woff2",
+    "index.html": "/furniture-restoration/index.html",
+    "main.ecfabe19.css.map": "/furniture-restoration/static/css/main.ecfabe19.css.map",
+    "main.069bf6fc.js.map": "/furniture-restoration/static/js/main.069bf6fc.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f4bed27.css",
+    "static/css/main.ecfabe19.css",
     "static/js/main.069bf6fc.js"
   ]
 }
