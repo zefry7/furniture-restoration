@@ -1,12 +1,34 @@
+// @font-face {
+//     font-family: '%name%';
+//     src: url('../public/font/%name%.eot') format('embedded-opentype'),
+//         url('../public/font/%name%.woff2') format('woff2'),
+//         url('../public/font/%name%.woff') format('woff'),
+//         url('../public/font/%name%.ttf') format('truetype');
+//     font-weight: 400; //полнота шрифта
+//     font-style: normal;
+//     font-display: swap;
+// }
+
 @font-face {
-    font-family: '%name%';
-    src: url('../public/font/%name%.eot') format('embedded-opentype'),
-        url('../public/font/%name%.woff2') format('woff2'),
-        url('../public/font/%name%.woff') format('woff'),
-        url('../public/font/%name%.ttf') format('truetype');
-    font-weight: 400; //полнота шрифта
+    font-family: 'OS';
+    src: url('OpenSans-Light.eot');
+    src: url('OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('OpenSans-Light.woff2') format('woff2'),
+        url('OpenSans-Light.woff') format('woff'),
+        url('OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
-
+@font-face {
+    font-family: 'TS';
+    src: url('TenorSans.eot');
+    src: url('TenorSans.eot?#iefix') format('embedded-opentype'),
+        url('TenorSans.woff2') format('woff2'),
+        url('TenorSans.woff') format('woff'),
+        url('TenorSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/explore-indonesia/static/css/main.c4fe0327.css",
-    "main.js": "/explore-indonesia/static/js/main.1435b700.js",
-    "index.html": "/explore-indonesia/index.html",
-    "main.c4fe0327.css.map": "/explore-indonesia/static/css/main.c4fe0327.css.map",
-    "main.1435b700.js.map": "/explore-indonesia/static/js/main.1435b700.js.map"
+    "main.css": "/furniture-restoration/static/css/main.c4fe0327.css",
+    "main.js": "/furniture-restoration/static/js/main.5408aa4a.js",
+    "index.html": "/furniture-restoration/index.html",
+    "main.c4fe0327.css.map": "/furniture-restoration/static/css/main.c4fe0327.css.map",
+    "main.5408aa4a.js.map": "/furniture-restoration/static/js/main.5408aa4a.js.map"
   },
   "entrypoints": [
     "static/css/main.c4fe0327.css",
-    "static/js/main.1435b700.js"
+    "static/js/main.5408aa4a.js"
   ]
 }
