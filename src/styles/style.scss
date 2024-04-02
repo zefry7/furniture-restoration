@@ -1,5 +1,6 @@
 @import "../../public/font/fonts";
 @import "./mixins/null-style";
+@import "./mixins/adaptive";
 @import "../content/import_scss";
 
 :root {
@@ -8,6 +9,13 @@
     --bg-main: #F3EFEA;
     --bg-footer: #715B4B;
     --text-footer: #F6F6F6;
+    --menu-burger: #57463A;
+}
+
+#root {
+    overflow: hidden;
+    height: 100%;
+    min-width: 375px;
 }
 
 body {
@@ -16,15 +24,17 @@ body {
 
 .header__content,
 .footer__content {
-    padding-left: 140px;
-    padding-right: 140px;
+    @include adap(padding-right, 140, 30);
+    @include adap(padding-left, 140, 30);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "TS";
+    @include adap(font-size, 48);
 }
 
 p, a {
+    @include adap(font-size, 16);
     font-family: "OS";
     line-height: 150%;
 }

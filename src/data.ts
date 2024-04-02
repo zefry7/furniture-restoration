@@ -1,8 +1,8 @@
 export let data = {
     header: {
-        links: ["Мастер-классы", "Мебель на заказ", "Контакты", "О нас"],
+        links: ["Мастер-классы",  "Контакты", "Мебель на заказ", "О нас"],
         logo: {
-            img: "./img/Layout/logo.svg",
+            img: "./img/Layout/logo.webp",
             alt: "Логотип"
         }
     },

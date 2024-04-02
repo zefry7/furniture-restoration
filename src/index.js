@@ -7,8 +7,6 @@ import { data } from "./data";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-console.log(window.location.href)
-
 root.render(
   <React.StrictMode>
     <HashRouter>
