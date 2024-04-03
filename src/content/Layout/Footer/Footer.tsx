@@ -11,12 +11,14 @@ function Footer(props) {
                     <span>{data.ip}</span>
                     <span>{data.inn}</span>
                 </p>
-                {data.links.map((value, index) => (
-                    <div className="footer__links" key={index}>
-                        <a href="#" className="footer__link">{value[0]}</a>
-                        <a href="#" className="footer__link">{value[1]}</a>
-                    </div>
-                ))}
+                <div className="footer__content-center">
+                    {data.links.map((value, index) => (
+                        <div className="footer__links" key={index}>
+                            <a href="#" className="footer__link">{value[0]}</a>
+                            <a href="#" className="footer__link">{value[1]}</a>
+                        </div>
+                    ))}
+                </div>
                 <div className="footer__socials">
                     {data.socials.map((value, index) => (
                         <div className="footer__socials-item" key={index}>

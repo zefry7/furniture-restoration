@@ -13,7 +13,6 @@
 }
 
 #root {
-    overflow: hidden;
     height: 100%;
     min-width: 375px;
 }
@@ -34,6 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, a {
+    color: var(--text-p);
     @include adap(font-size, 16);
     font-family: "OS";
     line-height: 150%;

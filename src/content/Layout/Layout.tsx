@@ -9,7 +9,7 @@ function Layout(props) {
         <>
             <Header data={props.header}/>
             <Outlet />
-            {/* <Footer data={props.footer}/> */}
+            <Footer data={props.footer}/>
         </>
     )
 }
