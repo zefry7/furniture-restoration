@@ -1,0 +1,49 @@
+.firm {
+    &__content {
+        @extend .content;
+        padding-top: 160px;
+    }
+    &__title-1 {
+        margin-bottom: 101px;
+    }
+    &__row-text {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 160px;
+    }
+    &__text {
+        padding-bottom: 12px;
+        border-bottom: 1px solid black;
+        text-align: center;
+        font-size: 18px;
+        padding-left: 45px;
+        padding-right: 45px;
+        width: 360px;
+    }
+    &__title-2 {
+        margin-bottom: 100px;
+    }
+    &__block {
+        margin-bottom: 160px;
+        display: grid;
+        width: 1160px;
+        height: 502px;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 1px;
+        background-color: black;
+        border: 1px solid black;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 56px;
+        background-color: var(--bg-main);
+        &-img {
+            margin-bottom: 20px;
+        }
+        &-text {
+        }
+    }
+}

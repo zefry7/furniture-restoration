@@ -28,8 +28,7 @@ body {
     background-color: var(--bg-main);
 }
 
-.header__content,
-.footer__content {
+.content {
     @include adap(padding-right, 140, 30);
     @include adap(padding-left, 140, 30);
 }

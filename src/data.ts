@@ -55,6 +55,73 @@ export let data = {
                 img: "./img/MainPage/main.jpeg",
                 alt: "Оформление"
             }
+        },
+        firm: {
+            title1: "NIKASON BRAND это",
+            text: [
+                "Производство авторской мебели из массива",
+                "Реставрация, редизайн, ремонт деревянной мебели",
+                "Производство мебели по индивидуальным размерам"
+            ],
+            title2: "Более 10 лет мы производим",
+            items: [
+                {
+                    name: "Двери",
+                    img: {
+                        src: "./img/MainPage/item-1.svg",
+                        alt: "Иконка товара"
+                    }
+                },
+                {
+                    name: "Шкафы",
+                    img: {
+                        src: "./img/MainPage/item-2.svg",
+                        alt: "Иконка товара"
+                    }
+                },
+                {
+                    name: "Двери",
+                    img: {
+                        src: "./img/MainPage/item-3.svg",
+                        alt: "Столы и стулья"
+                    }
+                },
+                {
+                    name: "Двери",
+                    img: {
+                        src: "./img/MainPage/item-4.svg",
+                        alt: "Комоды"
+                    }
+                },
+                {
+                    name: "Двери",
+                    img: {
+                        src: "./img/MainPage/item-5.svg",
+                        alt: "Тумбы"
+                    }
+                },
+                {
+                    name: "Двери",
+                    img: {
+                        src: "./img/MainPage/item-6.svg",
+                        alt: "Арки"
+                    }
+                },
+                {
+                    name: "Двери",
+                    img: {
+                        src: "./img/MainPage/item-7.svg",
+                        alt: "Перегородки"
+                    }
+                },
+                {
+                    name: "Двери",
+                    img: {
+                        src: "./img/MainPage/item-8.svg",
+                        alt: "Кровати"
+                    }
+                }              
+            ]
         }
     },
 }
