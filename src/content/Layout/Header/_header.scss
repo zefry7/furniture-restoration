@@ -23,6 +23,43 @@
     }
     &__link {
         width: max-content;
+        position: relative;
+        &::before,
+        &::after {
+            content: "";
+            display: inline-block;
+            @include adap(height, 15);
+            @include adap(width, 15);
+            position: absolute;
+            opacity: 0;
+            transition: all linear 0.2s;
+        }
+        &::before {
+            top: 0px;
+            left: 0;
+            border-top: solid var(--text-p);
+            @include adap(border-width, 2);
+        }
+        &::after {
+            bottom: 0;
+            right: 0;
+            border-bottom: solid var(--text-p);
+            @include adap(border-width, 2);
+        }
+        &:hover {
+            &::before,
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        &:active {
+            &::before,
+            &::after {
+                height: 100%;
+                width: 100%;
+            }
+        }
     }
     &__logo {
         position: absolute;

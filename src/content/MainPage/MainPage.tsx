@@ -1,7 +1,13 @@
 import React from 'react'
+import Intro from './Intro/Intro';
 
-function MainPage() {
-    return <h1>123</h1>;
+function MainPage(props) {
+    const data = props.data
+    return (
+        <>
+            <Intro data={data.intro}/>
+        </>
+    );
 }
 
 export default MainPage;

@@ -11,7 +11,7 @@ root.render(
   <React.StrictMode>
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Layout header={data.header} footer={data.footer}/>}>
+        <Route path="/" element={<Layout data={data.layout}/>}>
           <Route index element={<MainPage data={data.mainPage} />} />
         </Route>
       </Routes>

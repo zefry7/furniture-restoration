@@ -5,7 +5,7 @@
     }
     &__content {
         @include adap(padding-top, 84, 60, 40);
-        @include adap(padding-bottom, 236, 153);
+        @include adap(padding-bottom, 232, 155);
         display: grid;
         grid-template-columns: repeat(3, auto);
         &-center {
@@ -26,10 +26,43 @@
         color: var(--text-footer);
         width: max-content;
         border-bottom: solid transparent;
-        @include adap(border-width, 1);
-        &:hover {
+        position: relative;
+        width: max-content;
+        &::before,
+        &::after {
+            content: "";
+            display: inline-block;
+            @include adap(height, 15);
+            @include adap(width, 15);
+            position: absolute;
+            opacity: 0;
+            transition: all linear 0.2s;
+        }
+        &::before {
+            top: 0px;
+            left: 0;
+            border-top: solid var(--text-footer);
+            @include adap(border-width, 2);
+        }
+        &::after {
+            bottom: 0;
+            right: 0;
             border-bottom: solid var(--text-footer);
-            @include adap(border-width, 1);
+            @include adap(border-width, 2);
+        }
+        &:hover {
+            &::before,
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        &:active {
+            &::before,
+            &::after {
+                height: 100%;
+                width: 100%;
+            }
         }
     }
     &__socials {
@@ -39,10 +72,51 @@
         &-item {
             @include adap(height, 52);
             @include adap(width, 52);
+            position: relative;
             cursor: pointer;
+            overflow: hidden;
+            background-color: transparent;
+            z-index: 1;
+            border-radius: 100%;
+            transition: transform ease-in-out 0.3s;
             img {
                 width: 100%;
                 height: auto;
+            }
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+            &::before{
+                content: "";
+                display: inline-block;
+                height: 0;
+                bottom: 0;
+                @include adap(width, 52);
+                position: absolute;
+                transition: all ease-in 0.3s;
+                z-index: -1;
+                opacity: 0.8;
+            }
+        }
+
+        &-item:nth-child(1):hover  {
+            &::before{
+                @include adap(height, 52);
+                background-color: var(--icon-tg);
+            }
+        }
+        &-item:nth-child(2):hover  {
+            &::before{
+                @include adap(height, 52);
+                background-color: var(--icon-inst);
+            }
+        }
+        &-item:nth-child(3):hover  {
+            &::before{
+                @include adap(height, 52);
+                background-color: var(--icon-whatsapp);
             }
         }
     }

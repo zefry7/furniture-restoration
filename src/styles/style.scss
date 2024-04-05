@@ -10,6 +10,13 @@
     --bg-footer: #715B4B;
     --text-footer: #F6F6F6;
     --menu-burger: #57463A;
+    --icon-tg: rgb(0, 174, 255);
+    --icon-inst: rgb(238, 209, 131);
+    --icon-whatsapp: rgb(101, 230, 101);
+    --button-text: #F6F6F6;
+    --button-bg: #A1B29F;
+    --button-bg-hover: #687466;
+    --black-line: black;
 }
 
 #root {
@@ -28,6 +35,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    color: var(--text-h);
     font-family: "TS";
     @include adap(font-size, 48);
 }
@@ -37,4 +45,60 @@ p, a {
     @include adap(font-size, 16);
     font-family: "OS";
     line-height: 150%;
+}
+
+button {
+    @include adap(width, 245);
+    @include adap(height, 60);
+    @include adap(font-size, 16);
+    font-family: "OS";
+    line-height: 150%;
+    color: var(--button-text);
+    position: relative;
+    transition: transform linear 0.1s;
+    &::before {
+        content: attr(data-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--button-bg-hover);
+        transition: all linear 0.3s;
+        transform: rotateX(90deg) translateY(-100%);
+        z-index: 5;
+        opacity: 0;
+    }
+    &::after {
+        content: attr(data-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--button-bg);
+        transition: all linear 0.3s;
+        transform: rotateX(0) translateY(0);
+        z-index: 4;
+        opacity: 1;
+    }
+    &:hover {
+        &::before {
+            transform: rotateX(0) translateY(0%);
+            opacity: 1;
+        }
+        &::after {
+            transform: rotateX(-90deg) translateY(100%);
+            opacity: 0;
+        }
+    }
+    &:active {
+        transform: translateY(10%);
+    }
 }

@@ -7,9 +7,9 @@ import { Outlet } from 'react-router-dom';
 function Layout(props) {
     return (
         <>
-            <Header data={props.header}/>
+            <Header data={props.data.header}/>
             <Outlet />
-            <Footer data={props.footer}/>
+            <Footer data={props.data.footer}/>
         </>
     )
 }
