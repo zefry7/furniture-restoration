@@ -5,7 +5,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        @include adap(height, 140);
+        @include adap(height, 140, 120, 100);
     }
     &__links {
         height: 100%;

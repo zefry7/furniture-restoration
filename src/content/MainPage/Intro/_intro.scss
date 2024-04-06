@@ -4,38 +4,40 @@
         grid-template-columns: repeat(2, 50%);
         border-bottom: solid var(--black-line);
         border-top: solid var(--black-line);
-        border-width: 1px;
+        @include adap(border-width, 1);
     }
     &__main-img {
         img {
             width: 100%;
-            height: auto;
+            height: 100%;
         }
     }
     &__info {
-        padding-left: 40px;
-        padding-right: 123px;
-        padding-top: 200px;
+        @include adap(padding-right, 123, 80, 20);
+        @include adap(padding-left, 40, 40, 30);
+        @include adap(padding-top, 200, 150, 40);
+        @include adap(padding-bottom, 100, 70, 40);
     }
     &__label {
-        margin-bottom: 17px;
+        @include adap(margin-bottom, 17, 40, 76);
     }
     &__title {
-        margin-bottom: 41px;
+        @include adap(font-size, 48, 40, 31);
+        @include adap(margin-bottom, 40);
     }
     &__subtitle {
-        margin-bottom: 70px;
+        @include adap(margin-bottom, 70, 45, 20);
     }
     &__button {
-        margin-bottom: 94px;
+        @include adap(margin-bottom, 94, 82, 70);
     }
     &__socials {
         display: flex;
         justify-content: end;
-        gap: 40px;
+        @include adap(gap, 30);
         &-item {
-            @include adap(height, 52);
-            @include adap(width, 52);
+            @include adap(height, 52, 40);
+            @include adap(width, 52, 40);
             position: relative;
             cursor: pointer;
             overflow: hidden;
@@ -81,6 +83,33 @@
                 @include adap(height, 52);
                 background-color: var(--icon-whatsapp);
             }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .intro {
+        &__content {
+            grid-template-columns: 1fr;
+        }
+        &__main-img {
+            @include adap(height, 420);
+            grid-area: 2;
+            img {
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+        &__socials {
+            justify-content: start;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .intro {
+        &__label {
+            @include adap(width, 200);
         }
     }
 }
