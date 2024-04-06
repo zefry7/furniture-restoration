@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/furniture-restoration/static/css/main.861fd9fc.css",
-    "main.js": "/furniture-restoration/static/js/main.60ce62ce.js",
+    "main.css": "/furniture-restoration/static/css/main.08974319.css",
+    "main.js": "/furniture-restoration/static/js/main.77cdbd4b.js",
     "static/media/OpenSans-Light.eot": "/furniture-restoration/static/media/OpenSans-Light.633c3d04bd13ba9b5d90.eot",
     "static/media/OpenSans-Light.ttf": "/furniture-restoration/static/media/OpenSans-Light.61363a68845d9a8388b8.ttf",
     "static/media/TenorSans.eot": "/furniture-restoration/static/media/TenorSans.92d88fcd7013fa8516c4.eot",
@@ -11,11 +11,11 @@
     "static/media/TenorSans.woff": "/furniture-restoration/static/media/TenorSans.4cf9b6132670da48a8bd.woff",
     "static/media/TenorSans.woff2": "/furniture-restoration/static/media/TenorSans.cf47ec70e5df8abfbc1c.woff2",
     "index.html": "/furniture-restoration/index.html",
-    "main.861fd9fc.css.map": "/furniture-restoration/static/css/main.861fd9fc.css.map",
-    "main.60ce62ce.js.map": "/furniture-restoration/static/js/main.60ce62ce.js.map"
+    "main.08974319.css.map": "/furniture-restoration/static/css/main.08974319.css.map",
+    "main.77cdbd4b.js.map": "/furniture-restoration/static/js/main.77cdbd4b.js.map"
   },
   "entrypoints": [
-    "static/css/main.861fd9fc.css",
-    "static/js/main.60ce62ce.js"
+    "static/css/main.08974319.css",
+    "static/js/main.77cdbd4b.js"
   ]
 }
