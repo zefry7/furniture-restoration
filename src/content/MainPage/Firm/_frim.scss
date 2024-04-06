@@ -1,49 +1,104 @@
 .firm {
     &__content {
         @extend .content;
-        padding-top: 160px;
+        @include adap(padding-top, 160, 125, 90);
     }
     &__title-1 {
-        margin-bottom: 101px;
+        @include adap(font-size, 48, 40, 32);
+        @include adap(margin-bottom, 100, 80, 60);
     }
     &__row-text {
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 160px;
+        justify-content: center;
+        @include adap(gap, 40);
+        flex-wrap: wrap;
+        @include adap(margin-bottom, 160, 125, 90);
     }
     &__text {
-        padding-bottom: 12px;
-        border-bottom: 1px solid black;
+        @include adap(border-width, 1);
+        @include adap(font-size, 18);
+        @include adap(padding-left, 45, 30, 10);
+        @include adap(padding-right, 45, 30, 10);
+        @include adap(padding-bottom, 12);
+        @include adap(width, 360);
         text-align: center;
-        font-size: 18px;
-        padding-left: 45px;
-        padding-right: 45px;
-        width: 360px;
+        border-bottom: solid black;
     }
     &__title-2 {
-        margin-bottom: 100px;
+        @include adap(font-size, 48, 42, 36);
+        @include adap(margin-bottom, 100, 80, 60);
     }
     &__block {
-        margin-bottom: 160px;
+        @include adap(margin-bottom, 160, 125, 90);
         display: grid;
-        width: 1160px;
-        height: 502px;
+        @include adap(max-width, 1160);
+        @include adap(height, 502);
         grid-template-columns: repeat(4, auto);
         grid-template-rows: repeat(2, auto);
-        grid-gap: 1px;
+        @include adap(grid-gap, 1);
         background-color: black;
-        border: 1px solid black;
+        border: solid black;
+        @include adap(border-width, 1);
     }
     &__item {
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-direction: column;
-        padding-top: 56px;
         background-color: var(--bg-main);
         &-img {
             margin-bottom: 20px;
+            @include adap(height, 100);
+            @include adap(width, 100);
+            img {
+                width: 100%;
+                height: auto;
+            }
+            &:hover {
+                animation: move linear 0.2s;
+            }
         }
-        &-text {
+    }
+}
+
+@media (max-width: 768px) {
+    .firm {
+        &__block {
+            margin-left: auto;
+            margin-right: auto;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(4, auto);
+            @include adap(max-width, 500);
+            @include adap(height, 733);
         }
+    }
+}
+
+@media (max-width: 425px) {
+    .firm {
+        &__title-1 {
+            @include adap(width, 210);
+        }
+        &__title-2 {
+            @include adap(width, 288);
+        }
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(5%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    75% {
+        transform: translateX(-5%);
+    }
+    100% {
+        transform: translateX(0%);
     }
 }

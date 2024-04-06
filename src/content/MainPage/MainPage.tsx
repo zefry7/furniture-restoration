@@ -7,7 +7,7 @@ function MainPage(props) {
     return (
         <>
             <Intro data={data.intro}/>
-            {/* <Firm data={data.firm}/> */}
+            <Firm data={data.firm}/>
         </>
     );
 }

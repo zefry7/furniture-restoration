@@ -69,53 +69,53 @@ export let data = {
                     name: "Двери",
                     img: {
                         src: "./img/MainPage/item-1.svg",
-                        alt: "Иконка товара"
+                        alt: "Двери"
                     }
                 },
                 {
                     name: "Шкафы",
                     img: {
                         src: "./img/MainPage/item-2.svg",
-                        alt: "Иконка товара"
+                        alt: "Шкафы"
                     }
                 },
                 {
-                    name: "Двери",
+                    name: "Столы и стулья",
                     img: {
                         src: "./img/MainPage/item-3.svg",
                         alt: "Столы и стулья"
                     }
                 },
                 {
-                    name: "Двери",
+                    name: "Комоды",
                     img: {
                         src: "./img/MainPage/item-4.svg",
                         alt: "Комоды"
                     }
                 },
                 {
-                    name: "Двери",
+                    name: "Тумбы",
                     img: {
                         src: "./img/MainPage/item-5.svg",
                         alt: "Тумбы"
                     }
                 },
                 {
-                    name: "Двери",
+                    name: "Арки",
                     img: {
                         src: "./img/MainPage/item-6.svg",
                         alt: "Арки"
                     }
                 },
                 {
-                    name: "Двери",
+                    name: "Перегородки",
                     img: {
                         src: "./img/MainPage/item-7.svg",
                         alt: "Перегородки"
                     }
                 },
                 {
-                    name: "Двери",
+                    name: "Кровати",
                     img: {
                         src: "./img/MainPage/item-8.svg",
                         alt: "Кровати"
