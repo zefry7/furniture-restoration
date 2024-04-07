@@ -1,0 +1,34 @@
+.assurance {
+    &__content {
+        @extend .content;
+        padding-bottom: 200px;
+        padding-top: 200px;
+    }
+    &__wrap-info {
+        padding-top: 92px;
+        padding-right: 100px;
+        padding-left: 100px;
+        padding-bottom: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid var(--border-assurance);
+        outline: 7px solid var(--outline-assurance);
+        outline-offset: 5px;
+        position: relative;
+    }
+    &__title {
+        margin-bottom: 40px;
+        width: 650px;
+        text-align: center;
+    }
+    &__text {
+        font-size: 24px;
+    }
+    &__logo {
+        position: absolute;
+        right: 62px;
+        bottom: 38px;
+        opacity: 0.5;
+    }
+}

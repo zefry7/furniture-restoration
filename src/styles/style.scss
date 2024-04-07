@@ -20,6 +20,8 @@
     --bg-family: #EBEEEB;
     --bg-services-item1: #E3DACE;
     --bg-services-item2: #D4CDC3;
+    --border-assurance: #715B4B;
+    --outline-assurance: #A1B29F;
 }
 
 #root {
@@ -39,6 +41,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     color: var(--text-h);
     font-family: "TS";
+    line-height: 150%;
     @include adap(font-size, 48);
 }
 
