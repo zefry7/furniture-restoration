@@ -92,6 +92,132 @@ p {
   cursor: default;
 }
 
+button {
+  font-family: "OS";
+  line-height: 150%;
+  color: var(--button-text);
+  position: relative;
+  transition: transform linear 0.1s;
+}
+@media (min-width: 1440px) {
+  button {
+    width: 17.0138888889vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  button {
+    width: calc(245px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  button {
+    width: calc(245px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  button {
+    width: calc(245px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  button {
+    width: 245px;
+  }
+}
+@media (min-width: 1440px) {
+  button {
+    height: 4.1666666667vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  button {
+    height: calc(60px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  button {
+    height: calc(60px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  button {
+    height: calc(60px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  button {
+    height: 60px;
+  }
+}
+@media (min-width: 1440px) {
+  button {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  button {
+    font-size: calc(16px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  button {
+    font-size: calc(16px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  button {
+    font-size: calc(16px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  button {
+    font-size: 16px;
+  }
+}
+button::before {
+  content: attr(data-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--button-bg-hover);
+  transition: all linear 0.3s;
+  transform: rotateX(90deg) translateY(-100%);
+  z-index: 5;
+  opacity: 0;
+}
+button::after {
+  content: attr(data-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--button-bg);
+  transition: all linear 0.3s;
+  transform: rotateX(0) translateY(0);
+  z-index: 4;
+  opacity: 1;
+}
+button:hover::before {
+  transform: rotateX(0) translateY(0%);
+  opacity: 1;
+}
+button:hover::after {
+  transform: rotateX(-90deg) translateY(100%);
+  opacity: 0;
+}
+button:active {
+  transform: translateY(10%);
+}
+
 .header__content {
   display: flex;
   align-items: center;
@@ -2891,130 +3017,4 @@ p, a {
   p, a {
     font-size: 16px;
   }
-}
-
-button {
-  font-family: "OS";
-  line-height: 150%;
-  color: var(--button-text);
-  position: relative;
-  transition: transform linear 0.1s;
-}
-@media (min-width: 1440px) {
-  button {
-    width: 17.0138888889vw;
-  }
-}
-@media screen and (max-width: 1439px) and (min-width: 1280px) {
-  button {
-    width: calc(245px + 0 * (100vw - 1280px) / (1440 - 1280));
-  }
-}
-@media screen and (max-width: 1279px) and (min-width: 768px) {
-  button {
-    width: calc(245px + 0 * (100vw - 768px) / (1280 - 768));
-  }
-}
-@media screen and (max-width: 767px) and (min-width: 320px) {
-  button {
-    width: calc(245px + 0 * (100vw - 320px) / (768 - 320));
-  }
-}
-@media (max-width: 375px) {
-  button {
-    width: 245px;
-  }
-}
-@media (min-width: 1440px) {
-  button {
-    height: 4.1666666667vw;
-  }
-}
-@media screen and (max-width: 1439px) and (min-width: 1280px) {
-  button {
-    height: calc(60px + 0 * (100vw - 1280px) / (1440 - 1280));
-  }
-}
-@media screen and (max-width: 1279px) and (min-width: 768px) {
-  button {
-    height: calc(60px + 0 * (100vw - 768px) / (1280 - 768));
-  }
-}
-@media screen and (max-width: 767px) and (min-width: 320px) {
-  button {
-    height: calc(60px + 0 * (100vw - 320px) / (768 - 320));
-  }
-}
-@media (max-width: 375px) {
-  button {
-    height: 60px;
-  }
-}
-@media (min-width: 1440px) {
-  button {
-    font-size: 1.1111111111vw;
-  }
-}
-@media screen and (max-width: 1439px) and (min-width: 1280px) {
-  button {
-    font-size: calc(16px + 0 * (100vw - 1280px) / (1440 - 1280));
-  }
-}
-@media screen and (max-width: 1279px) and (min-width: 768px) {
-  button {
-    font-size: calc(16px + 0 * (100vw - 768px) / (1280 - 768));
-  }
-}
-@media screen and (max-width: 767px) and (min-width: 320px) {
-  button {
-    font-size: calc(16px + 0 * (100vw - 320px) / (768 - 320));
-  }
-}
-@media (max-width: 375px) {
-  button {
-    font-size: 16px;
-  }
-}
-button::before {
-  content: attr(data-text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--button-bg-hover);
-  transition: all linear 0.3s;
-  transform: rotateX(90deg) translateY(-100%);
-  z-index: 5;
-  opacity: 0;
-}
-button::after {
-  content: attr(data-text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--button-bg);
-  transition: all linear 0.3s;
-  transform: rotateX(0) translateY(0);
-  z-index: 4;
-  opacity: 1;
-}
-button:hover::before {
-  transform: rotateX(0) translateY(0%);
-  opacity: 1;
-}
-button:hover::after {
-  transform: rotateX(-90deg) translateY(100%);
-  opacity: 0;
-}
-button:active {
-  transform: translateY(10%);
 }/*# sourceMappingURL=style.css.map */

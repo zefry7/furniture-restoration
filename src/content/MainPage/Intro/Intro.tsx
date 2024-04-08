@@ -1,4 +1,5 @@
 import React from "react"
+import MyButton from "../../../components/MyButton/MyButton"
 
 function Intro(props) {
     const data = props.data;
@@ -12,7 +13,7 @@ function Intro(props) {
                     <p className="intro__label">{data.label}</p>
                     <h2 className="intro__title">{data.title}</h2>
                     <p className="intro__subtitle">{data.subtitle}</p>
-                    <button className="intro__button" data-text={data.button}></button>
+                    <MyButton class={"intro__button"} text={data.button}/>
                     <div className="intro__socials">
                         {data.icons.map((value, index) => (
                             <div className="intro__socials-item" key={index}>

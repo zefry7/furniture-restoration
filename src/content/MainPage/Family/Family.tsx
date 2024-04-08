@@ -1,4 +1,5 @@
 import React from "react";
+import MyButton from "../../../components/MyButton/MyButton"
 
 function Family(props) {
     const data = props.data
@@ -13,7 +14,7 @@ function Family(props) {
                     <p className="family__author">{data.author}</p>
                     <p className="family__text">{data.text[0]}</p>
                     <p className="family__text">{data.text[1]}</p>
-                    <button className="family__button" data-text={data.buttonText}></button>
+                    <MyButton class={"family__button"} text={data.buttonText}/>
                 </div>
             </div>
             <h2 className="family__title">{data.title[1]}</h2>

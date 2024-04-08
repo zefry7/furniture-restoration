@@ -11,7 +11,7 @@ function Assurance(props) {
                 <div className="assurance__logo">
                     <img src={data.img.src} alt={data.img.alt} />
                 </div>
-            </div>
+            </div>           
         </div>
     </section>
 }

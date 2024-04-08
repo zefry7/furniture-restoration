@@ -1,4 +1,5 @@
 import React from "react"
+import MyButton from "../../../components/MyButton/MyButton"
 
 function Services(props) {
     const data = props.data;
@@ -15,7 +16,7 @@ function Services(props) {
                         <div className="services__item-info">
                             <h5 className="services__item-title">{item.title}</h5>
                             <p className="services__item-text">{item.text}</p>
-                            <button className="services__item-button" data-text={item.button}></button>
+                            <MyButton class={"services__item-button"} text={item.button}/>
                         </div>
                     </div>
                 ))}
