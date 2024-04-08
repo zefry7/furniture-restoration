@@ -4,7 +4,6 @@
     }
     &__title {
         @extend .content;
-        @include adap(font-size, 48, 40, 32);
         @include adap(margin-bottom, 100, 80, 60);
     }
     &__block {
@@ -24,6 +23,7 @@
         }
     }
     &__info {
+        @include adap(padding-right, 40, 40, 30);
         @include adap(padding-left, 40, 40, 30);
         @include adap(padding-top, 68, 68, 60);
         @include adap(padding-bottom, 50, 40, 30);
@@ -57,6 +57,7 @@
         &::-webkit-media-controls-current-time-display {
             @include adap(font-size, 12);
         }
+    
     }
 }
 
