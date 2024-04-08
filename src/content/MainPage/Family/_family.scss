@@ -1,12 +1,14 @@
 .family {
     &__content {
+        @include adap(margin-bottom, 200, 180, 160);
     }
     &__title {
         @extend .content;
-        margin-bottom: 100px;
+        @include adap(font-size, 48, 40, 32);
+        @include adap(margin-bottom, 100, 80, 60);
     }
     &__block {
-        margin-bottom: 160px;
+        @include adap(margin-bottom, 160, 120, 60);
         display: grid;
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: 100%;
@@ -17,27 +19,29 @@
         img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
+            object-position: 65% center;
         }
     }
     &__info {
-        padding-left: 40px;
-        padding-top: 68px;
-
+        @include adap(padding-left, 40, 40, 30);
+        @include adap(padding-top, 68, 68, 60);
+        @include adap(padding-bottom, 50, 40, 30);
         .family__text:nth-child(3) {
-            margin-bottom: 52px;
+            @include adap(margin-bottom, 52, 41, 30);
         }
     }
     &__author {
-        margin-bottom: 40px;
-        width: 400px;
-        font-size: 24px;
+        @include adap(margin-bottom, 40, 30, 20);
+        @include adap(max-width, 400);
+        @include adap(font-size, 24);
         font-family: "TS";
         color: black;
     }
     &__text {
-        width: 515px;
-        font-size: 18px;
-        margin-bottom: 30px;
+        @include adap(max-width, 515);
+        @include adap(font-size, 18);
+        @include adap(margin-bottom, 30);
         color: black;
     }
     &__button {
@@ -45,11 +49,32 @@
     }
     &__video-wrap {
         @extend .content;
-        margin-bottom: 200px;
     }
     &__video {
         width: 100%;
         height: 100%;
         background-color: #C4C4C4;
+        &::-webkit-media-controls-current-time-display {
+            @include adap(font-size, 12);
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .family {
+        &__block {
+            grid-template-columns: repeat(1, 100%);
+            grid-template-rows: auto;
+        }
+        &__img {
+            @include adap(height, 500, 500, 450, 250);
+        }
+        &__video-wrap {
+            padding: 0 !important;
+        }
+        &__video {
+            @include adap(min-height, 230);
+        }
     }
 }

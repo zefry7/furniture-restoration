@@ -12,8 +12,8 @@ function MainPage(props) {
             <Intro data={data.intro}/>
             <Firm data={data.firm}/>
             <Family data={data.family}/>
-            <Services data={data.services}/>
-            <Assurance data={data.assurance} />
+            {/* <Services data={data.services}/>
+            <Assurance data={data.assurance} /> */}
         </>
     );
 }
