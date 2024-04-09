@@ -1,6 +1,6 @@
 .family {
     &__content {
-        @include adap(margin-bottom, 200, 180, 160);
+        @include adap(margin-bottom, 200, 150, 100);
     }
     &__title {
         @extend .content;
@@ -77,5 +77,11 @@
         &__video {
             @include adap(min-height, 230);
         }
+        &__content {
+            .family__title:nth-child(3) {
+                @include adap(width, 500, 500, 500, 300);
+            }
+        }
     }
 }
+

@@ -1,34 +1,50 @@
 .assurance {
     &__content {
         @extend .content;
-        padding-bottom: 200px;
-        padding-top: 200px;
+        @include adap(padding-bottom, 200, 150, 90);
+        @include adap(padding-top, 200, 150, 90);
     }
     &__wrap-info {
-        padding-top: 92px;
-        padding-right: 100px;
-        padding-left: 100px;
-        padding-bottom: 180px;
+        @include adap(padding-top, 92, 92, 60, 30);
+        @include adap(padding-right, 100, 100, 60, 15);
+        @include adap(padding-left, 100, 100, 60, 15);
+        @include adap(padding-bottom, 180, 140, 100, 80);
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: 1px solid var(--border-assurance);
-        outline: 7px solid var(--outline-assurance);
+        border: solid var(--border-assurance);
+        @include adap(border-width, 1);
+        outline: solid var(--outline-assurance);
+        @include adap(outline-width, 7);
         outline-offset: 5px;
         position: relative;
     }
     &__title {
-        margin-bottom: 40px;
-        width: 650px;
+        @include adap(font-size, 48, 40, 30);
+        @include adap(margin-bottom, 40, 40, 30);
+        @include adap(max-width, 650);
         text-align: center;
     }
     &__text {
-        font-size: 24px;
+        @include adap(font-size, 24, 20, 16);
     }
     &__logo {
         position: absolute;
-        right: 62px;
-        bottom: 38px;
+        @include adap(right, 62, 40, 15);
+        @include adap(bottom, 38, 20, 10);
         opacity: 0.5;
+        @include adap(width, 150, 120, 100, 80);
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .assurance {
+        &__title {
+            text-align: left;
+        }
     }
 }

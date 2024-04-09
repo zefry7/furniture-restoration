@@ -27,7 +27,7 @@
         &-info {
             @include adap(padding-top, 110, 85, 60);
             @include adap(padding-left, 40, 40, 30);
-            @include adap(padding-bottom, 100);
+            @include adap(padding-bottom, 100, 80, 60);
             @include adap(padding-right, 140, 80, 30);
             background-color: var(--bg-services-item1);
         }
