@@ -1,9 +1,24 @@
-import { MainPage } from "./content/import_ts";
+import { MainPage, MasterClassPage } from "./content/import_ts";
 
 export let data = {
     layout: {
         header: {
-            links: ["Мастер-классы", "Контакты", "Мебель на заказ", "О нас"],
+            links: [
+                {
+                    text: "Мастер-классы",
+                    href: "/master-class"
+                },
+                {
+                    text: "Контакты",
+                },
+                {
+                    text: "Мебель на заказ",
+                    href: "/order-furniture"
+                },
+                {
+                    text: "О нас",
+                    href: "/about-us"
+                }],
             logo: {
                 img: "./img/Layout/logo.webp",
                 alt: "Логотип"
@@ -166,4 +181,57 @@ export let data = {
             }
         }
     },
+    masterClassPage: {
+        work: {
+            info: {
+                text: "Нам доверяют мебель с историей в 120 лет",
+                button: {
+                    text: "Смотреть мастер-классы",
+                    href: ""
+                },
+                img: {
+                    src: "./img/MasterClassPage/bg-1.jpeg",
+                    alt: "Фон"
+                }
+            },
+            title: "Наши работы",
+            text: ["До", "После"],
+            workImg: [{
+                src: "./img/MasterClassPage/work-before-1.jpeg",
+                alt: "Фото мебели до"
+            },
+            {
+                src: "./img/MasterClassPage/work-after-1.jpeg",
+                alt: "Фото мебели после"
+            },
+            {
+                src: "./img/MasterClassPage/work-before-2.jpeg",
+                alt: "Фото мебели до"
+            },
+            {
+                src: "./img/MasterClassPage/work-after-2.jpeg",
+                alt: "Фото мебели после"
+            }, 
+            {
+                src: "./img/MasterClassPage/work-before-3.jpeg",
+                alt: "Фото мебели до"
+            }, 
+            {
+                src: "./img/MasterClassPage/work-after-3.jpeg",
+                alt: "Фото мебели после"
+            }, 
+            {
+                src: "./img/MasterClassPage/work-before-4.jpeg",
+                alt: "Фото мебели до"
+            }, 
+            {
+                src: "./img/MasterClassPage/work-after-4.jpeg",
+                alt: "Фото мебели после"
+            }],
+            button: {
+                text: "Смотреть больше примеров",
+                href: ""
+            }
+        }
+    }
 }

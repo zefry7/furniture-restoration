@@ -1,0 +1,78 @@
+.works {
+    &__content {
+    }
+    &__info {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0));
+        &-img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        &-text {
+            margin-bottom: 100px;
+            color: var(--white);
+        }
+        &-button {
+            width: 300px;
+            background-color: inherit;
+            &::after,
+            &::before {
+                background-color: var(--white);
+                color: var(--text-blue);
+            }
+            &::before {
+                background-color: var(--gray);
+            }   
+        }
+    }
+    &__block {
+        @extend .content;
+        padding-top: 160px;
+        padding-bottom: 160px;
+        background-color: var(--bg-main);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-title {
+            margin-bottom: 100px;
+            align-self: flex-start;
+        }
+        &-wrap {
+            margin-bottom: 84px;
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            gap: 40px;
+        }
+        &-item {
+        }
+        &-img {
+            height: 300px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+            margin-bottom: 25px;
+        }
+        &-text {
+            text-align: center;
+        }
+        &-button {
+
+
+        }
+    }
+}
+

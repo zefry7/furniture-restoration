@@ -11,7 +11,6 @@
         display: flex;
         justify-content: center;
         @include adap(gap, 40);
-        flex-wrap: wrap;
         @include adap(margin-bottom, 160, 125, 90);
     }
     &__text {
@@ -57,6 +56,14 @@
             &:hover {
                 animation: move linear 0.2s;
             }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .firm {
+        &__row-text {
+            flex-wrap: wrap;
         }
     }
 }

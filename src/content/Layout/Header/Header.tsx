@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header(props) {
     const data = props.data;
@@ -29,11 +30,11 @@ function Header(props) {
             <div className="header__content">
                 <div className="header__menu-content">
                     <div className="header__logo">
-                        <img src={data.logo.img} alt={data.logo.alt} />
+                        <Link to="/" relative="path"><img src={data.logo.img} alt={data.logo.alt} /></Link>
                     </div>
                     <nav className="header__links">
                         {data.links.map((value, index) => (
-                            <a href="#" className="header__link" key={index}>{value}</a>
+                            <Link to={value?.href} className="header__link" key={index} relative="path">{value.text}</Link>
                         ))}
                     </nav>
                     <div className="header__menu-close" onClick={burgerMenu}>

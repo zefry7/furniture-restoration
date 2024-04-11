@@ -5,6 +5,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
+        background-color: var(--bg-main);
         @include adap(height, 140, 120, 100);
     }
     &__links {

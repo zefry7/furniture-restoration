@@ -223,6 +223,7 @@ button:active {
   align-items: center;
   justify-content: center;
   position: relative;
+  background-color: var(--bg-main);
 }
 @media (min-width: 1440px) {
   .header__content {
@@ -2177,7 +2178,6 @@ button:active {
 .firm__row-text {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 @media (min-width: 1440px) {
   .firm__row-text {
@@ -2633,6 +2633,11 @@ button:active {
   animation: move linear 0.2s;
 }
 
+@media (max-width: 1024px) {
+  .firm__row-text {
+    flex-wrap: wrap;
+  }
+}
 @media (max-width: 768px) {
   .firm__block {
     margin-left: auto;
@@ -3913,6 +3918,72 @@ button:active {
     text-align: left;
   }
 }
+.works__info {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0));
+}
+.works__info-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+.works__info-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.works__info-text {
+  margin-bottom: 100px;
+  color: var(--white);
+}
+.works__info-button {
+  width: 300px;
+  background-color: inherit;
+}
+.works__info-button::after, .works__info-button::before {
+  background-color: var(--white);
+  color: var(--text-blue);
+}
+.works__info-button::before {
+  background-color: var(--gray);
+}
+.works__block {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  background-color: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.works__block-title {
+  margin-bottom: 100px;
+  align-self: flex-start;
+}
+.works__block-wrap {
+  margin-bottom: 84px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 40px;
+}
+.works__block-img {
+  height: 300px;
+  margin-bottom: 25px;
+}
+.works__block-img img {
+  width: 100%;
+  height: 100%;
+}
+.works__block-text {
+  text-align: center;
+}
 :root {
   --text-p: #323232;
   --text-h: #57463A;
@@ -3932,6 +4003,9 @@ button:active {
   --bg-services-item2: #D4CDC3;
   --border-assurance: #715B4B;
   --outline-assurance: #A1B29F;
+  --white: #F6F6F6;
+  --gray: #bbbaba;
+  --text-blue: #4C6D77;
 }
 
 #root {
@@ -3944,52 +4018,52 @@ body {
 }
 
 @media (min-width: 1440px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
     padding-right: 9.7222222222vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
     padding-right: calc(30px + 110 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
     padding-right: calc(30px + 0 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
     padding-right: calc(30px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
     padding-right: 30px;
   }
 }
 @media (min-width: 1440px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
     padding-left: 9.7222222222vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
     padding-left: calc(30px + 110 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
     padding-left: calc(30px + 0 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
     padding-left: calc(30px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
     padding-left: 30px;
   }
 }
