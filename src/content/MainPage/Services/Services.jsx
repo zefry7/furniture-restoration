@@ -14,7 +14,7 @@ function Services(props) {
                             <img src={item.img.src} alt={item.img.alt} />
                         </div>
                         <div className="services__item-info">
-                            <h5 className="services__item-title">{item.title}</h5>
+                            <h3 className="services__item-title">{item.title}</h3>
                             <p className="services__item-text">{item.text}</p>
                             <MyButton class={"services__item-button"} text={item.button}/>
                         </div>

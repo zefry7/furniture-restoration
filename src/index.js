@@ -9,11 +9,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const url = window.location.pathname.split("/")[1]
 
+
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={`/${url}`}>
+    <BrowserRouter basename={`/${url}/`}>
       <Routes>
-        <Route path="/" element={<Layout data={data.layout}/>}>
+        <Route path="/" exact element={<Layout data={data.layout}/>}>
           <Route index element={<MainPage data={data.mainPage} />} />
           <Route path="master-class" element={<MasterClassPage data={data.masterClassPage} />} />
         </Route>

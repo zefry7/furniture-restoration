@@ -1,4 +1,5 @@
 import React from "react";
+import MyButton from "../../../components/MyButton/MyButton";
 
 function Works(props) {
     const data = props.data;
@@ -10,7 +11,7 @@ function Works(props) {
                     <img src={data.info.img.src} alt={data.info.img.alt} />
                 </div>
                 <h2 className="works__info-text">{data.info.text}</h2>
-                <button className="works__info-button" data-text={data.info.button.text}></button>
+                <MyButton class="works__info-button" text={data.info.button.text}/>
             </div>
             <div className="works__block">
                 <h3 className="works__block-title">{data.title}</h3>
@@ -27,7 +28,7 @@ function Works(props) {
                         </div>
                     })}
                 </div>
-                <button className="works__block-button" data-text={data.button.text}></button>
+                <MyButton class="works__block-button" text={data.button.text}/>
             </div>
         </div>
     </section>

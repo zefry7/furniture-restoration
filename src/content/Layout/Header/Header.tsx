@@ -30,11 +30,11 @@ function Header(props) {
             <div className="header__content">
                 <div className="header__menu-content">
                     <div className="header__logo">
-                        <Link to="/" relative="path"><img src={data.logo.img} alt={data.logo.alt} /></Link>
+                        <Link to='/'><img src={data.logo.img} alt={data.logo.alt} /></Link>
                     </div>
                     <nav className="header__links">
                         {data.links.map((value, index) => (
-                            <Link to={value?.href} className="header__link" key={index} relative="path">{value.text}</Link>
+                            <Link to={value?.href} className="header__link" key={index}>{value.text}</Link>
                         ))}
                     </nav>
                     <div className="header__menu-close" onClick={burgerMenu}>
