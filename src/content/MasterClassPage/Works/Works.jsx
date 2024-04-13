@@ -7,9 +7,6 @@ function Works(props) {
     return <section className="works">
         <div className="works__content">
             <div className="works__info">
-                <div className="works__info-img">
-                    <img src={data.info.img.src} alt={data.info.img.alt} />
-                </div>
                 <h2 className="works__info-text">{data.info.text}</h2>
                 <MyButton class="works__info-button" text={data.info.button.text}/>
             </div>

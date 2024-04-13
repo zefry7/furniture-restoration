@@ -189,10 +189,6 @@ export let data = {
                     text: "Смотреть мастер-классы",
                     href: ""
                 },
-                img: {
-                    src: "./img/MasterClassPage/bg-1.jpeg",
-                    alt: "Фон"
-                }
             },
             title: "Наши работы",
             text: ["До", "После"],
@@ -211,19 +207,19 @@ export let data = {
             {
                 src: "./img/MasterClassPage/work-after-2.jpeg",
                 alt: "Фото мебели после"
-            }, 
+            },
             {
                 src: "./img/MasterClassPage/work-before-3.jpeg",
                 alt: "Фото мебели до"
-            }, 
+            },
             {
                 src: "./img/MasterClassPage/work-after-3.jpeg",
                 alt: "Фото мебели после"
-            }, 
+            },
             {
                 src: "./img/MasterClassPage/work-before-4.jpeg",
                 alt: "Фото мебели до"
-            }, 
+            },
             {
                 src: "./img/MasterClassPage/work-after-4.jpeg",
                 alt: "Фото мебели после"
@@ -244,6 +240,81 @@ export let data = {
                 src: "./img/MasterClassPage/bg-2.jpeg",
                 alt: "Фон"
             }
+        },
+        types: {
+            title: ["Мастер-классы по реставрации мебели", "Мастер-классы по столярному делу"],
+            items: [
+                {
+                    text: "Буфет",
+                    img: {
+                        src: "./img/MasterClassPage/item-1.webp",
+                        alt: "Буфет"
+                    }
+                },
+                {
+                    text: "Сундук",
+                    img: {
+                        src: "./img/MasterClassPage/item-2.webp",
+                        alt: "Сундук"
+                    }
+                },
+                {
+                    text: "Комод",
+                    img: {
+                        src: "./img/MasterClassPage/item-3.webp",
+                        alt: "Комод"
+                    }
+                },
+                {
+                    text: "Советское кресло",
+                    img: {
+                        src: "./img/MasterClassPage/item-4.webp",
+                        alt: "Советское кресло"
+                    }
+                },
+                {
+                    text: "Стол",
+                    img: {
+                        src: "./img/MasterClassPage/item-5.webp",
+                        alt: "Стол"
+                    }
+                },
+                {
+                    text: "Стул",
+                    img: {
+                        src: "./img/MasterClassPage/item-6.webp",
+                        alt: "Стул"
+                    }
+                },
+                {
+                    text: "Обивка стула",
+                    img: {
+                        src: "./img/MasterClassPage/item-7.webp",
+                        alt: "Обивка стула"
+                    }
+                },
+                {
+                    text: "Ремонт стула",
+                    img: {
+                        src: "./img/MasterClassPage/item-8.webp",
+                        alt: "Ремонт стула"
+                    }
+                },
+            ],
+            example: [{
+                text: "Консольный столик",
+                img: {
+                    src: "./img/MasterClassPage/master-class-1.jpeg",
+                    alt: "Консольный столик"
+                }
+            },
+            {
+                text: "Столярное дело для начинающих",
+                img: {
+                    src: "./img/MasterClassPage/master-class-2.jpeg",
+                    alt: "Столярное дело для начинающих"
+                }
+            }]
         }
     }
 }
