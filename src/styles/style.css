@@ -3984,6 +3984,64 @@ button:active {
 .works__block-text {
   text-align: center;
 }
+.techniques__content {
+  background-color: var(--bg-main);
+}
+.techniques__title {
+  margin-bottom: 100px;
+}
+.techniques__list {
+  margin-bottom: 160px;
+  margin-left: 315px;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+  position: relative;
+}
+.techniques__list::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  width: 3px;
+  height: 700px;
+  background-color: var(--color-line);
+}
+.techniques__item {
+  font-size: 18px;
+  position: relative;
+}
+.techniques__item::before {
+  content: attr(data-index);
+  display: inline-block;
+  margin-right: 48px;
+  height: 60px;
+  width: 60px;
+  font-size: 24px;
+  line-height: 60px;
+  border-radius: 100%;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--color-li);
+  color: var(--white);
+}
+.techniques__block {
+  padding-left: 245px;
+  padding-right: 245px;
+  height: 100vh;
+  background: url("./img/bg-2.jpeg") left center/cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.techniques__text {
+  color: var(--white);
+  text-align: center;
+}
+
 :root {
   --text-p: #323232;
   --text-h: #57463A;
@@ -4006,6 +4064,8 @@ button:active {
   --white: #F6F6F6;
   --gray: #bbbaba;
   --text-blue: #4C6D77;
+  --color-li: #A1B29F;
+  --color-line: #C4C4C4;
 }
 
 #root {
@@ -4018,52 +4078,52 @@ body {
 }
 
 @media (min-width: 1440px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info {
     padding-right: 9.7222222222vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info {
     padding-right: calc(30px + 110 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info {
     padding-right: calc(30px + 0 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info {
     padding-right: calc(30px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info {
     padding-right: 30px;
   }
 }
 @media (min-width: 1440px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info {
     padding-left: 9.7222222222vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info {
     padding-left: calc(30px + 110 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info {
     padding-left: calc(30px + 0 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info {
     padding-left: calc(30px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info {
     padding-left: 30px;
   }
 }
@@ -4099,33 +4159,33 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-p, a {
+p, a, li {
   color: var(--text-p);
   font-family: "OS";
   line-height: 150%;
 }
 @media (min-width: 1440px) {
-  p, a {
+  p, a, li {
     font-size: 1.1111111111vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
-  p, a {
+  p, a, li {
     font-size: calc(16px + 0 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
-  p, a {
+  p, a, li {
     font-size: calc(16px + 0 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  p, a {
+  p, a, li {
     font-size: calc(16px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
-  p, a {
+  p, a, li {
     font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */

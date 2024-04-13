@@ -26,6 +26,8 @@
     --white: #F6F6F6;
     --gray: #bbbaba;
     --text-blue: #4C6D77;
+    --color-li: #A1B29F;
+    --color-line: #C4C4C4;
 }
 
 #root {
@@ -49,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
     @include adap(font-size, 48, 40, 32);
 }
 
-p, a {
+p, a, li {
     color: var(--text-p);
     @include adap(font-size, 16);
     font-family: "OS";
