@@ -1,4 +1,3 @@
-import { MainPage, MasterClassPage } from "./content/import_ts";
 
 export let data = {
     layout: {

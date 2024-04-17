@@ -2,13 +2,15 @@
     &__content {
     }
     &__info {
+        @include adap(padding-left, 30);
+        @include adap(padding-right, 30);
         height: 100vh;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background:  url("./img/bg-1.jpeg") center/ cover;
+        background: url("./img/bg-1.jpeg") 60% center/ cover;
         background-attachment: fixed;
         position: relative;
         &::before {
@@ -21,12 +23,13 @@
         }
 
         &-text {
-            margin-bottom: 100px;
+            text-align: center;
+            @include adap(margin-bottom, 100, 80, 62);
             color: var(--white);
             z-index: 2;
         }
         &-button {
-            width: 300px;
+            @include adap(width, 315);
             background-color: inherit;
             &::after,
             &::before {
@@ -40,38 +43,46 @@
     }
     &__block {
         @extend .content;
-        padding-top: 160px;
-        padding-bottom: 160px;
+        @include adap(padding-top, 160, 120, 80);
+        @include adap(padding-bottom, 160, 120, 80);
         display: flex;
         flex-direction: column;
         align-items: center;
         &-title {
-            margin-bottom: 100px;
+            @include adap(margin-bottom, 100, 100, 77);
             align-self: flex-start;
         }
         &-wrap {
-            margin-bottom: 84px;
+            width: 100%;
+            @include adap(margin-bottom, 84, 84, 70);
             display: grid;
             grid-template-columns: repeat(4, auto);
-            gap: 40px;
-        }
-        &-item {
+            @include adap(column-gap, 40, 40, 30, 20);
+            @include adap(row-gap, 40, 30);
         }
         &-img {
-            height: 300px;
+            @include adap(height, 300, 300, 220, 161);
             img {
                 width: 100%;
                 height: 100%;
             }
-            margin-bottom: 25px;
+            @include adap(margin-bottom, 25, 20);
         }
         &-text {
             text-align: center;
         }
-        &-button {
-
-
-        }
     }
 }
 
+@media (max-width: 768px) {
+    .works {
+        &__block {
+            &-wrap {
+                grid-template-columns: repeat(2, auto);
+            }
+            &-img {
+                @include adap(height, 300, 300, 300, 161);
+            }
+        }
+    }
+}
