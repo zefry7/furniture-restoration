@@ -1,17 +1,17 @@
 .types {
     &__content {
-        margin-bottom: 160px;
-        padding-top: 160px;
+        @include adap(padding-bottom, 160, 125, 90);
+        @include adap(padding-top, 160, 125, 90);
         @extend .content;
     }
     &__title {
-        margin-bottom: 100px;
+        @include adap(margin-bottom, 100, 100, 70);
     }
     &__list {
-        margin-bottom: 160px;
+        @include adap(margin-bottom, 160, 130, 100);
         display: grid;
         grid-template-columns: repeat(4, 25%);
-        row-gap: 70px;
+        @include adap(row-gap, 70, 55, 40);
     }
     &__item {
         display: flex;
@@ -19,8 +19,8 @@
         justify-content: flex-end;
         align-items: center;
         &-img {
-            margin-bottom: 23px;
-            width: 200px;
+            @include adap(margin-bottom, 20);
+            @include adap(max-width, 200, 200, 200, 150);
             img {
                 width: 100%;
                 height: auto;
@@ -30,26 +30,45 @@
             }
         }
         &-text {
-            font-size: 18px;
+            @include adap(font-size, 18);
             font-weight: 700;
         }
     } 
     &__block {
         display: grid;
-        grid-template-columns: repeat(2, 50%);
+        width: 100%;
+        grid-template-columns: repeat(2, 48%);
         gap: 40px;
         &-img {
-            margin-bottom: 20px;
-            height: 560px;
+            @include adap(margin-bottom, 20);
+            @include adap(height, 560, 560, 350, 315);
             img {
                 width: 100%;
                 height: 100%;
             }
         }
         &-text {
-            font-size: 18px;
+            @include adap(font-size, 18);
             font-weight: bold;
             text-align: center;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .types {
+        &__list {
+            grid-template-columns: repeat(2, 50%);
+        }
+        &__block {
+            grid-template-columns: repeat(1, 100%);
+            
+            &-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
     }
 }

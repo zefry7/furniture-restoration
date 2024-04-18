@@ -8,8 +8,8 @@ function MasterClassPage(props) {
 
     return <>
         <Works data={data.work}/>
-        {/* <Techniques data={data.techniques} />
-        <Types data={data.types} /> */}
+        {/* <Techniques data={data.techniques} /> */}
+        <Types data={data.types} />
     </>
 }
 
