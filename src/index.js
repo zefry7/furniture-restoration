@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import "./styles/style.css"
-import { Layout, MainPage, MasterClassPage } from "./content/import_ts"
+import { AboutUs, Layout, MainPage, MasterClassPage } from "./content/import_ts"
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { data } from "./data";
 
@@ -21,6 +21,7 @@ root.render(
         <Route path="/" element={<Layout data={data.layout}/>}>
           <Route index element={<MainPage data={data.mainPage} />} />
           <Route path="master-class" element={<MasterClassPage data={data.masterClassPage} />} />
+          <Route path='about-us' element={<AboutUs data={data.aboutUs}/>}/>
         </Route>
       </Routes>
     </BrowserRouter >

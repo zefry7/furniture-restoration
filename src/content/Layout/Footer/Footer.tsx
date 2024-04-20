@@ -1,11 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 function Footer(props) {
     const data = props.data;
 
+    const moveUp = (e) => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+
     return (
-        <footer className="footer">
+        <footer className="footer" id="section-footer">
             <div className="footer__content">
                 <p className="footer__inn">
                     <span>{data.ip}</span>
@@ -14,8 +23,8 @@ function Footer(props) {
                 <div className="footer__content-center">
                     {data.links.map((value, index) => (
                         <div className="footer__links" key={index}>
-                            <a href="#" className="footer__link">{value[0]}</a>
-                            <a href="#" className="footer__link">{value[1]}</a>
+                            <Link to={value[0]?.href} className="footer__link" key={index} onClick={(e) => moveUp(e)}>{value[0]?.text}</Link>
+                            <Link to={value[1]?.href} className="footer__link" key={index} onClick={(e) => moveUp(e)}>{value[1]?.text}</Link>
                         </div>
                     ))}
                 </div>

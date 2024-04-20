@@ -14,7 +14,7 @@ function Header(props) {
 
     useEffect(() => {
         window.addEventListener("resize", () => {
-            const sizeWindow = window.innerWidth; 
+            const sizeWindow = window.innerWidth;
             if (sizeWindow > 768) {
                 const menuContent = document.querySelector(".header__menu-content")
                 const blockContent = document.querySelector(".header__content")
@@ -25,6 +25,17 @@ function Header(props) {
     }, [])
 
 
+    const moveToBlock = (e) => {
+        e.preventDefault()
+        var attr = e.target.getAttribute("data-section");
+
+        console.log(attr)
+        window.scrollTo({
+            top: document.getElementById(attr).offsetTop,
+            behavior: "smooth"
+        })
+    }
+
     return (
         <header className="header">
             <div className="header__content">
@@ -33,9 +44,13 @@ function Header(props) {
                         <Link to='/'><img src={data.logo.img} alt={data.logo.alt} /></Link>
                     </div>
                     <nav className="header__links">
-                        {data.links.map((value, index) => (
-                            <Link to={value?.href} className="header__link" key={index}>{value.text}</Link>
-                        ))}
+                        {data.links.map((value, index) => {
+                            if (!value?.dataSection) {
+                                return <Link to={value?.href} className="header__link" key={index}>{value.text}</Link>
+                            } else {
+                                return <Link to={value?.href} data-section={value?.dataSection} className="header__link" onClick={e => moveToBlock(e)} key={index}>{value.text}</Link>
+                            }
+                        })}
                     </nav>
                     <div className="header__menu-close" onClick={burgerMenu}>
                         <span></span>

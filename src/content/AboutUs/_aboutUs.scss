@@ -1,0 +1,106 @@
+.about-us {
+    &__content {
+        @extend .content;
+        padding-top: 120px;
+        padding-bottom: 243px;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid var(--black-line);
+    }
+    &__title {
+        align-self: center;
+        margin-bottom: 40px;
+        width: 750px;
+        text-align: center;
+    }
+    &__main-img {
+        margin-bottom: 155px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__facts {
+        margin-bottom: 160px;
+        display: flex;
+        justify-content: space-between;
+        &-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            span {
+                margin-bottom: 20px;
+                font-size: 48px;
+                font-weight: bold;
+                line-height: 150%;
+                color: var(--text-h);
+                font-family: "TS";
+            }
+        }       
+    }
+    
+    &__info {
+        margin-bottom: 160px;
+        display: flex;
+        gap: 40px;
+        &-left {
+            min-width: 460px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }   
+        &-rigth {
+        }
+    }
+    
+    &__name {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-family: "TS";
+    }
+    &__role {
+        margin-bottom: 70px;
+    }
+    &__block-text {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    &__text {
+    }
+    &__idea {
+        margin-bottom: 160px;
+        display: flex;
+        flex-direction: column;
+        &-title {
+            margin-bottom: 70px;      
+        }
+        &-text {
+            align-self: flex-end;
+            width: 700px;
+            font-size: 24px;
+            text-align: right;
+        }
+    }
+    &__media {
+        margin-bottom: 160px;
+        &-title {
+            margin-bottom: 20px;
+
+        }
+        &-text {
+            
+        }
+    }
+    &__feedback {
+        display: flex;
+        flex-direction: column;
+        &-title {
+            margin-bottom: 100px;
+        }
+    }
+    &__button {
+        align-self: center;
+    }
+}
