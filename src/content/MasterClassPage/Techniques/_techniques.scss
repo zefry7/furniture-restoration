@@ -4,16 +4,16 @@
     }
     &__info {
         @extend .content;
+        @include adap(margin-bottom, 160, 130, 100);
     }
     &__title {
-        margin-bottom: 100px;
+        @include adap(margin-bottom, 100, 100, 77);
     }
     &__list {
-        margin-bottom: 160px;
-        margin-left: 315px;
+        @include adap(margin-left, 340, 340, 120, 0);
         display: flex;
         flex-direction: column;
-        gap: 54px;
+        @include adap(gap, 54);
         position: relative;
 
         &::before {
@@ -21,36 +21,37 @@
             display: inline-block;
             position: absolute;
             top: 0;
-            left: 30px;
-            width: 3px;
-            height: 700px;
+            @include adap(left, 30);
+            @include adap(width, 3);
+            @include adap(height, 710);
             background-color: var(--color-line);
         }
     }
     &__item {
-        font-size: 18px;
+        display: flex;
+        align-items: center;
+        @include adap(font-size, 18);
         position: relative;
         &::before{
             content: attr(data-index);
             display: inline-block;
-            margin-right: 48px;
-            height: 60px;
-            width: 60px;
-            font-size: 24px;
-            line-height: 60px;
+            @include adap(margin-right, 48, 36, 24);
+            @include adap(height, 60);
+            @include adap(min-width, 60);
+            @include adap(font-size, 24);
+            @include adap(line-height, 60);
             border-radius: 100%;
             font-weight: 700;
             text-align: center;
-            vertical-align: middle;
             background-color: var(--color-li);
             color: var(--white);
         }
     }
     &__block {
-        padding-left: 245px;
-        padding-right: 245px;
+        @include adap(padding-left, 245, 135, 30);
+        @include adap(padding-right, 245, 135, 30);
         height: 100vh;
-        background: url("./img/bg-2.jpeg") left center/ cover;
+        background: url("./img/bg-2.jpeg") center/ cover;
         background-attachment: fixed;
         display: flex;
         justify-content: center;
