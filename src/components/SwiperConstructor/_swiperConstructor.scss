@@ -1,0 +1,13 @@
+.swiper {
+    margin-left: -30px !important;
+    margin-right: -30px !important;
+    padding: 0 28px !important;
+    &-slide {
+        display: flex !important;
+        justify-content: center;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}

@@ -1,36 +1,42 @@
 .about-us {
     &__content {
         @extend .content;
-        padding-top: 120px;
-        padding-bottom: 243px;
+        @include adap(padding-top, 120, 120, 60, 20);
+        @include adap(padding-bottom, 243, 195, 150);
         display: flex;
         flex-direction: column;
-        border-top: 1px solid var(--black-line);
+        border-top: solid var(--black-line);
+        @include adap(border-width, 1);
     }
     &__title {
+        display: flex;
+        flex-direction: column;
         align-self: center;
-        margin-bottom: 40px;
-        width: 750px;
+        @include adap(margin-bottom, 40);
         text-align: center;
     }
     &__main-img {
-        margin-bottom: 155px;
+        @include adap(margin-bottom, 155, 110, 72);
         img {
+            @include adap(min-height, 264);
+            object-fit: cover;
+            object-position: 70% center;
             width: 100%;
             height: 100%;
         }
     }
     &__facts {
-        margin-bottom: 160px;
+        @include adap(margin-bottom, 160, 125, 90);
         display: flex;
         justify-content: space-between;
         &-text {
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
             span {
-                margin-bottom: 20px;
-                font-size: 48px;
+                @include adap(margin-bottom, 20, 15, 10);
+                @include adap(font-size, 48, 40, 32);
                 font-weight: bold;
                 line-height: 150%;
                 color: var(--text-h);
@@ -40,67 +46,119 @@
     }
     
     &__info {
-        margin-bottom: 160px;
+        @include adap(margin-bottom, 160, 125, 90);
         display: flex;
-        gap: 40px;
+        @include adap(gap, 40, 40, 20, 60);
         &-left {
-            min-width: 460px;
+            @include adap(min-width, 460, 460, 315);
             img {
+                @include adap(max-height, 460);
+                object-fit: cover;
+                object-position: center 30%;
                 width: 100%;
-                height: 100%;
+                height: auto;
             }
         }   
-        &-rigth {
-        }
     }
     
     &__name {
-        margin-bottom: 20px;
-        font-size: 24px;
+        @include adap(margin-bottom, 20, 15, 10);
+        @include adap(font-size, 24);
         font-family: "TS";
+        color: black;
     }
     &__role {
-        margin-bottom: 70px;
+        @include adap(margin-bottom, 70, 60);
+        color: black;
     }
     &__block-text {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        @include adap(gap, 24);
     }
     &__text {
+        color: black;
     }
     &__idea {
-        margin-bottom: 160px;
+        @include adap(margin-bottom, 160, 125, 90);
         display: flex;
         flex-direction: column;
         &-title {
-            margin-bottom: 70px;      
+            @include adap(margin-bottom, 70);      
         }
         &-text {
             align-self: flex-end;
-            width: 700px;
-            font-size: 24px;
+            display: flex;
+            flex-direction: column;
+            @include adap(font-size, 24, 20, 16);
             text-align: right;
         }
     }
     &__media {
-        margin-bottom: 160px;
+        @include adap(margin-bottom, 160, 125, 90);
         &-title {
-            margin-bottom: 20px;
+            @include adap(margin-bottom, 20);
 
         }
         &-text {
-            
+            @include adap(margin-bottom, 100, 80, 60);
         }
     }
     &__feedback {
         display: flex;
         flex-direction: column;
         &-title {
-            margin-bottom: 100px;
+            @include adap(margin-bottom, 100, 80, 60);
         }
     }
     &__button {
         align-self: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-us {
+        &__info {
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us {
+        &__main-img {
+            @include adap(margin-left, -30);
+            @include adap(margin-right, -30);
+        }
+        &__facts {
+            flex-direction: column;
+            @include adap(gap, 40);
+        }
+        &__info {
+            &-left {
+                @include adap(margin-left, -30);
+                @include adap(margin-right, -30);
+            }
+        }
+        &__name {
+            display: flex;
+            flex-wrap: wrap;
+            @include adap(column-gap, 5);
+        }
+    }   
+}
+@media (max-width: 500px) {
+    .about-us {
+        &__idea {
+            &-text {
+                display: block;
+                @include adap(width, 300);
+            }
+        }
+        &__feedback {
+            &-title {
+                @include adap(width, 280);
+            }
+        }
     }
 }
