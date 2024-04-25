@@ -28,7 +28,7 @@ function Header(props) {
     const moveToBlock = (e) => {
         e.preventDefault()
         var attr = e.target.getAttribute("data-section");
-
+        burgerMenu()
         console.log(attr)
         window.scrollTo({
             top: document.getElementById(attr).offsetTop,
@@ -41,12 +41,12 @@ function Header(props) {
             <div className="header__content">
                 <div className="header__menu-content">
                     <div className="header__logo">
-                        <Link to='/'><img src={data.logo.img} alt={data.logo.alt} /></Link>
+                        <Link to='/' onClick={burgerMenu}><img src={data.logo.img} alt={data.logo.alt}  /></Link>
                     </div>
                     <nav className="header__links">
                         {data.links.map((value, index) => {
                             if (!value?.dataSection) {
-                                return <Link to={value?.href} className="header__link" key={index}>{value.text}</Link>
+                                return <Link to={value?.href} className="header__link" onClick={burgerMenu} key={index}>{value.text}</Link>
                             } else {
                                 return <Link to={value?.href} data-section={value?.dataSection} className="header__link" onClick={e => moveToBlock(e)} key={index}>{value.text}</Link>
                             }

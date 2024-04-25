@@ -18,7 +18,7 @@
     &__main-img {
         @include adap(margin-bottom, 155, 110, 72);
         img {
-            @include adap(min-height, 264);
+            @include adap(min-height, 300);
             object-fit: cover;
             object-position: 70% center;
             width: 100%;
@@ -48,7 +48,7 @@
     &__info {
         @include adap(margin-bottom, 160, 125, 90);
         display: flex;
-        @include adap(gap, 40, 40, 20, 60);
+        @include adap(gap, 40, 40, 40, 60);
         &-left {
             @include adap(min-width, 460, 460, 315);
             img {
@@ -101,13 +101,6 @@
 
         }
         &-text {
-            @include adap(margin-bottom, 100, 80, 60);
-        }
-    }
-    &__feedback {
-        display: flex;
-        flex-direction: column;
-        &-title {
             @include adap(margin-bottom, 100, 80, 60);
         }
     }

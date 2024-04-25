@@ -7,6 +7,11 @@
         position: relative;
         background-color: var(--bg-main);
         @include adap(height, 140, 120, 100);
+        &::before {
+            content: "";
+            background-color: initial;
+            transition: all 0.2s linear;
+        }
     }
     &__links {
         height: 100%;
@@ -67,8 +72,8 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        @include adap(height, 100);
-        @include adap(width, 100);
+        @include adap(height, 100, 80);
+        @include adap(width, 100, 80);
         transform: translateX(-50%) translateY(-50%);
         cursor: pointer;
         img {
@@ -100,7 +105,7 @@
         @include adap(width, 40);
         position: absolute;
         @include adap(right, 30);
-        @include adap(top, 50);
+        @include adap(top, 30);
         cursor: pointer;
         span {
             @include adap(height, 3);
@@ -131,13 +136,13 @@
             top: 0;
             z-index: 100;
             @include adap(width, 270);
-            height: 100vh;
+            height: 115vh;
             background-color: var(--bg-main);
             right: -100%;
             transition: right linear 0.2s;
             @include adap(padding-right, 30);
             @include adap(padding-left, 30);
-            @include adap(padding-top, 40);
+            @include adap(padding-top, 30);
         }
         &__menu-burger_active {
             right: 0;
@@ -165,7 +170,7 @@
                 content: "";
                 display: inline-block;
                 position: fixed;
-                height: 100vh;
+                height: 115vh;
                 width: 100vw;
                 top: 0;
                 left: 0;

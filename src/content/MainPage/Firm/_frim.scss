@@ -56,6 +56,9 @@
             &:hover {
                 animation: move linear 0.2s;
             }
+            &:active {
+                animation: move linear 0.2s;
+            }
         }
     }
 }

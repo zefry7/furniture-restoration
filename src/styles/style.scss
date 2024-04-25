@@ -28,6 +28,7 @@
     --text-blue: #4C6D77;
     --color-li: #A1B29F;
     --color-line: #C4C4C4;
+    --color-text-bt: #715B4B;
 }
 
 #root {
@@ -73,5 +74,16 @@ p, a, li {
     }
     100% {
         transform: translateX(0%);
+    }
+}
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    &__title {
+        @include adap(margin-bottom, 100, 80, 60);
+    }
+    &__button {
+        align-self: center;
     }
 }

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import MyButton from "../../components/MyButton/MyButton";
 import SwiperConstructor from "../../components/SwiperConstructor/SwiperConstructor";
+import { UserContext } from "../..";
 
 function AboutUs(props) {
+    const data2 = useContext(UserContext)
+
     const data = props.data
     return <section className="about-us">
         <div className="about-us__content">
@@ -37,11 +40,11 @@ function AboutUs(props) {
             <div className="about-us__media">
                 <h2 className="about-us__media-title">{data?.titles[2]}</h2>
                 <p className="about-us__media-text">{data?.mediaText}</p>
-                <SwiperConstructor data={data?.mediaItems}/> 
+                <SwiperConstructor data={data?.mediaItems} />
             </div>
-            <div className="about-us__feedback">
-                <h2 className="about-us__feedback-title">{data?.titles[3]}</h2>
-                <MyButton class="about-us__button" text={data?.button} />
+            <div className="feedback">
+                <h2 className="feedback__title">{data2.feedback.title}</h2>
+                <MyButton class="feedback__button" text={data2.feedback.button} />
             </div>
         </div>
     </section>
