@@ -87,3 +87,11 @@ p, a, li {
         align-self: center;
     }
 }
+
+@media (max-width: 425px) {
+    .feedback {
+        &__button {
+            width: 100%;
+        }
+    }
+}

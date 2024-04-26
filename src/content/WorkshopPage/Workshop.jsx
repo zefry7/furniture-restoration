@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import MyButton from "../../components/MyButton/MyButton";
 import { UserContext } from "../..";
+import SwiperConstructor from "../../components/SwiperConstructor/SwiperConstructor";
 
 function Workshop() {
     const feedbackData = useContext(UserContext).feedback;
@@ -35,6 +36,10 @@ function Workshop() {
                             </div>
                         ))}
                     </div>
+                </div>
+                <div className="workshop__comment">
+                    <h2 className="workshop__comment-title">{data.comment.title}</h2>
+                    <SwiperConstructor data={data.comment.img} />
                 </div>
                 <div className="feedback">
                     <h2 className="feedback__title">{feedbackData.title}</h2>

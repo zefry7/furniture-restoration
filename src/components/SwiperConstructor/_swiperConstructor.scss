@@ -1,7 +1,6 @@
 .swiper {
-    margin-left: -30px !important;
-    margin-right: -30px !important;
-    padding: 0 28px !important;
+    @include adap(margin-left, -140, -30);
+    @include adap(margin-right, -140, -30);
     &-slide {
         display: flex !important;
         justify-content: center;

@@ -1,7 +1,7 @@
 .workshop {
-    &__content {
-    }
     &__intro {
+        @include adap(padding-left, 30);
+        @include adap(padding-right, 30);
         height: 100vh;
         width: 100%;
         display: flex;
@@ -15,13 +15,13 @@
             color: var(--white);
         }
         &-title {
-            margin-bottom: 90px;
+            @include adap(margin-bottom, 90, 75, 60);
             display: flex;
             flex-direction: column;
             align-items: center;
             color: var(--white);
             span {
-                margin-bottom: 25px;
+                @include adap(margin-bottom, 25, 14, 3);
             }
         }
         &-button {
@@ -39,98 +39,203 @@
     }
     &__wrap {
         @extend .content;
-        padding-top: 160px;
-        padding-bottom: 180px;
+        @include adap(padding-top, 160, 130, 100);
+        @include adap(padding-bottom, 180, 165, 150);
     }
     &__select {
-        margin-bottom: 160px;
+        @include adap(margin-bottom, 160, 125, 90);
         &-title {
-            margin-bottom: 100px;
+            @include adap(margin-bottom, 100, 80, 60);
         }
         &-grid {
+            align-self: center;
             display: grid;
-            grid-template-columns: repeat(3, 33.3%);
+            grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, auto);
-            row-gap: 78px;
-            column-gap: 18px;
-
+            @include adap(row-gap, 78, 60, 40);
+            @include adap(column-gap, 18, 18, 0);
             .workshop__select-item:nth-last-child(4),
             .workshop__select-item:nth-last-child(3),
             .workshop__select-item:nth-last-child(2),
             .workshop__select-item:nth-last-child(1) {
                 .workshop__select-item-text {
-                    width: 280px;
+                    @include adap(width, 280);
                 }
             }
         }
         &-item {
+            width: max-content;
             &-title {
-                margin-bottom: 10px;
-                font-size: 16px;
+                @include adap(margin-bottom, 10);
+                @include adap(font-size, 16);
                 font-weight: 700;
                 color: var(--text-p);
             }
             hr {
-                margin-bottom: 20px;
-                width: 200px;
-                height: 1px;
+                @include adap(margin-bottom, 20);
+                @include adap(width, 200);
+                @include adap(height, 1);
                 background-color: var(--border-assurance);
             }
             &-text {
-                width: 215px;
+                @include adap(width, 215);
             }
         }
     }
     &__stage {
-        margin-bottom: 160px;
+        @include adap(margin-bottom, 160, 125, 90);
         &-title {
-            margin-bottom: 100px;
+            @include adap(margin-bottom, 100, 80, 60);
         }
         &-grid {
+            align-self: center;
             display: grid;
-            grid-template-columns: repeat(3, 33.29%);
+            grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, auto);
-            gap: 1px;
             border-left: solid var(--black-line);
-            border-left-width: 1px;
+            @include adap(border-left-width, 1);
             border-top: solid var(--black-line);
-            border-top-width: 1px;
+            @include adap(border-top-width, 1);
 
             .workshop__stage-item:nth-last-child(3),
             .workshop__stage-item:nth-last-child(2),
             .workshop__stage-item:nth-last-child(1) {
                 .workshop__stage-text {
-                    width: 232px;
+                    @include adap(width, 232);
                 }
             }
         }
         &-item {
-            height: 140px;
-            padding-left: 40px;
-            padding-bottom: 30px;
+            @include adap(height, 140);
+            @include adap(padding-left, 40, 30, 20);
+            @include adap(padding-bottom, 30, 25, 20);
             display: flex;
             align-items: end;
             background-color: var(--bg-main);
             border-right: solid var(--black-line);
-            border-right-width: 1px;
+            @include adap(border-right-width, 1);
             border-bottom: solid var(--black-line);
-            border-bottom-width: 1px;
+            @include adap(border-bottom-width, 1);
             position: relative;
             &::after {
                 content: attr(data-index);
                 display: inline-block;
-                height: 72px;
+                @include adap(height, 72);
+                @include adap(line-height, 72);
                 width: max-content;
                 position: absolute;
-                top: 10px;
-                right: 40px;
-                font-size: 48px;
+                @include adap(top, 10, 6, 3);
+                @include adap(right, 40, 30, 20);
+                @include adap(font-size, 48);
                 font-family: "TS";
                 color: var(--text-h);
             }
         }
         &-text {
-            width: 200px;
+            @include adap(width, 200);
+        }
+    }
+    &__comment {
+        @include adap(margin-bottom, 110, 85, 60);
+        @include adap(margin-left, -140, -30);
+        @include adap(margin-right, -140, -30);
+        .swiper {
+            @include adap(padding-left, 140, 30);
+            @include adap(padding-right, 140, 30);
+            &-slide {
+                img {
+                    @include adap(max-height, 370);
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        &-title {
+            @include adap(margin-bottom, 100, 80, 60);
+            @extend .content;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .workshop {
+        &__comment {
+            .swiper {
+                overflow: hidden !important;
+            }
+        }
+        &__select {
+            display: flex;
+            flex-direction: column;
+            &-grid {
+                grid-template-columns: repeat(2, 50%);
+                grid-template-rows: repeat(3, auto);
+            }
+            &-item {
+                @include adap(width, 365);
+            }
+        }
+        &__stage {
+            display: flex;
+            flex-direction: column;
+            &-grid {
+                grid-template-columns: repeat(2, 50%);
+                grid-template-rows: repeat(3, auto);
+            }
+            &-item {
+                @include adap(width, 365);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .workshop {
+        &__select {
+            &-grid {
+                grid-template-columns: repeat(1, 100%);
+                grid-template-rows: auto;
+                justify-items: center;
+            }
+        }
+        &__stage {
+            &-grid {
+                grid-template-columns: repeat(1, 100%);
+                grid-template-rows: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .workshop {
+        &__intro {
+            align-items: start;
+            &-title {
+                align-items: start;
+            }
+            &-button {
+                width: 100%;
+            }
+        }
+        &__select {
+            &-title {
+                @include adap(max-width, 250);
+            }
+            &-grid {
+                width: 100%;
+            }
+            &-item {
+                width: 100% !important;
+            }
+        }
+        &__stage {
+            &-grid {
+                width: 100%;
+            }
+            &-item {
+                width: 100% !important;
+            }
         }
     }
 }

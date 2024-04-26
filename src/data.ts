@@ -34,7 +34,7 @@ export let data = {
                     href: "/master-class"
                 }, {
                     text: "Мебель на заказ",
-                    href: "/order-furniture"
+                    href: "/workshop"
                 }],
                 [{
                     text: "Контакты",
@@ -422,12 +422,37 @@ export let data = {
         stage: {
             title: "Этапы производства",
             items: [
-                "Встреча с клиентом", 
+                "Встреча с клиентом",
                 "Подписание договора, внесение предоплаты",
                 "Выезд к клиенту на замер (при необходимости)",
                 "Составление проекта",
                 "Изготовление и согласование всех стадий с клиентом",
                 "Доставка и монтаж изделия (при необходимости)"
+            ]
+        },
+        comment: {
+            title: "Клиенты о нас",
+            img: [
+                {
+                    src: "./img/Workshop/feedback-1.jpeg",
+                    alt: "Мнение"
+                },
+                {
+                    src: "./img/Workshop/feedback-2.jpeg",
+                    alt: "Мнение"
+                },
+                {
+                    src: "./img/Workshop/feedback-3.jpeg",
+                    alt: "Мнение"
+                },
+                {
+                    src: "./img/Workshop/feedback-4.jpeg",
+                    alt: "Мнение"
+                },
+                {
+                    src: "./img/Workshop/feedback-5.jpeg",
+                    alt: "Мнение"
+                }
             ]
         }
     },
@@ -435,5 +460,5 @@ export let data = {
         title: "Оставьте заявку и мы с вами свяжемся",
         button: "Оставить заявку"
     }
-    
+
 }

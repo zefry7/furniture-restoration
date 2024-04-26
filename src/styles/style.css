@@ -218,10 +218,55 @@ button:active {
   transform: translateY(10%);
 }
 
-.swiper {
-  margin-left: -30px !important;
-  margin-right: -30px !important;
-  padding: 0 28px !important;
+@media (min-width: 1440px) {
+  .swiper {
+    margin-left: -9.7222222222vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .swiper {
+    margin-left: calc(-30px + -110 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .swiper {
+    margin-left: calc(-30px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .swiper {
+    margin-left: calc(-30px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .swiper {
+    margin-left: -30px;
+  }
+}
+@media (min-width: 1440px) {
+  .swiper {
+    margin-right: -9.7222222222vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .swiper {
+    margin-right: calc(-30px + -110 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .swiper {
+    margin-right: calc(-30px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .swiper {
+    margin-right: calc(-30px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .swiper {
+    margin-right: -30px;
+  }
 }
 .swiper-slide {
   display: flex !important;
@@ -5929,18 +5974,114 @@ button:active {
   background: linear-gradient(to bottom, rgba(50, 50, 50, 0.4745098039) 50%, rgba(255, 255, 255, 0)), url("./img/bg-workshop.jpeg") 60% center/cover;
   background-attachment: scroll, fixed;
 }
+@media (min-width: 1440px) {
+  .workshop__intro {
+    padding-left: 2.0833333333vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__intro {
+    padding-left: calc(30px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__intro {
+    padding-left: calc(30px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__intro {
+    padding-left: calc(30px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__intro {
+    padding-left: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__intro {
+    padding-right: 2.0833333333vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__intro {
+    padding-right: calc(30px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__intro {
+    padding-right: calc(30px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__intro {
+    padding-right: calc(30px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__intro {
+    padding-right: 30px;
+  }
+}
 .workshop__intro-subtitle {
   color: var(--white);
 }
 .workshop__intro-title {
-  margin-bottom: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: var(--white);
 }
-.workshop__intro-title span {
-  margin-bottom: 25px;
+@media (min-width: 1440px) {
+  .workshop__intro-title {
+    margin-bottom: 6.25vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__intro-title {
+    margin-bottom: calc(75px + 15 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__intro-title {
+    margin-bottom: calc(60px + 15 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__intro-title {
+    margin-bottom: calc(60px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__intro-title {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__intro-title span {
+    margin-bottom: 1.7361111111vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__intro-title span {
+    margin-bottom: calc(14px + 11 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__intro-title span {
+    margin-bottom: calc(3px + 11 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__intro-title span {
+    margin-bottom: calc(3px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__intro-title span {
+    margin-bottom: 3px;
+  }
 }
 .workshop__intro-button {
   background-color: inherit;
@@ -5977,96 +6118,1117 @@ button:active {
 .workshop__intro-button::before {
   background-color: var(--gray);
 }
-.workshop__wrap {
-  padding-top: 160px;
-  padding-bottom: 180px;
+@media (min-width: 1440px) {
+  .workshop__wrap {
+    padding-top: 11.1111111111vw;
+  }
 }
-.workshop__select {
-  margin-bottom: 160px;
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__wrap {
+    padding-top: calc(130px + 30 * (100vw - 1280px) / (1440 - 1280));
+  }
 }
-.workshop__select-title {
-  margin-bottom: 100px;
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__wrap {
+    padding-top: calc(100px + 30 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__wrap {
+    padding-top: calc(100px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__wrap {
+    padding-top: 100px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__wrap {
+    padding-bottom: 12.5vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__wrap {
+    padding-bottom: calc(165px + 15 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__wrap {
+    padding-bottom: calc(150px + 15 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__wrap {
+    padding-bottom: calc(150px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__wrap {
+    padding-bottom: 150px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__select {
+    margin-bottom: 11.1111111111vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__select {
+    margin-bottom: calc(125px + 35 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__select {
+    margin-bottom: calc(90px + 35 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__select {
+    margin-bottom: calc(90px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__select {
+    margin-bottom: 90px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__select-title {
+    margin-bottom: 6.9444444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__select-title {
+    margin-bottom: calc(80px + 20 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__select-title {
+    margin-bottom: calc(60px + 20 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__select-title {
+    margin-bottom: calc(60px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__select-title {
+    margin-bottom: 60px;
+  }
 }
 .workshop__select-grid {
+  align-self: center;
   display: grid;
-  grid-template-columns: repeat(3, 33.3%);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  row-gap: 78px;
-  -moz-column-gap: 18px;
-       column-gap: 18px;
 }
-.workshop__select-grid .workshop__select-item:nth-last-child(4) .workshop__select-item-text,
-.workshop__select-grid .workshop__select-item:nth-last-child(3) .workshop__select-item-text,
-.workshop__select-grid .workshop__select-item:nth-last-child(2) .workshop__select-item-text,
-.workshop__select-grid .workshop__select-item:nth-last-child(1) .workshop__select-item-text {
-  width: 280px;
+@media (min-width: 1440px) {
+  .workshop__select-grid {
+    row-gap: 5.4166666667vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__select-grid {
+    row-gap: calc(60px + 18 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__select-grid {
+    row-gap: calc(40px + 20 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__select-grid {
+    row-gap: calc(40px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__select-grid {
+    row-gap: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__select-grid {
+    -moz-column-gap: 1.25vw;
+         column-gap: 1.25vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__select-grid {
+    -moz-column-gap: calc(18px + 0 * (100vw - 1280px) / (1440 - 1280));
+         column-gap: calc(18px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__select-grid {
+    -moz-column-gap: calc(0px + 18 * (100vw - 768px) / (1280 - 768));
+         column-gap: calc(0px + 18 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__select-grid {
+    -moz-column-gap: calc(0px + 0 * (100vw - 320px) / (768 - 320));
+         column-gap: calc(0px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__select-grid {
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__select-grid .workshop__select-item:nth-last-child(4) .workshop__select-item-text,
+  .workshop__select-grid .workshop__select-item:nth-last-child(3) .workshop__select-item-text,
+  .workshop__select-grid .workshop__select-item:nth-last-child(2) .workshop__select-item-text,
+  .workshop__select-grid .workshop__select-item:nth-last-child(1) .workshop__select-item-text {
+    width: 19.4444444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__select-grid .workshop__select-item:nth-last-child(4) .workshop__select-item-text,
+  .workshop__select-grid .workshop__select-item:nth-last-child(3) .workshop__select-item-text,
+  .workshop__select-grid .workshop__select-item:nth-last-child(2) .workshop__select-item-text,
+  .workshop__select-grid .workshop__select-item:nth-last-child(1) .workshop__select-item-text {
+    width: calc(280px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__select-grid .workshop__select-item:nth-last-child(4) .workshop__select-item-text,
+  .workshop__select-grid .workshop__select-item:nth-last-child(3) .workshop__select-item-text,
+  .workshop__select-grid .workshop__select-item:nth-last-child(2) .workshop__select-item-text,
+  .workshop__select-grid .workshop__select-item:nth-last-child(1) .workshop__select-item-text {
+    width: calc(280px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__select-grid .workshop__select-item:nth-last-child(4) .workshop__select-item-text,
+  .workshop__select-grid .workshop__select-item:nth-last-child(3) .workshop__select-item-text,
+  .workshop__select-grid .workshop__select-item:nth-last-child(2) .workshop__select-item-text,
+  .workshop__select-grid .workshop__select-item:nth-last-child(1) .workshop__select-item-text {
+    width: calc(280px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__select-grid .workshop__select-item:nth-last-child(4) .workshop__select-item-text,
+  .workshop__select-grid .workshop__select-item:nth-last-child(3) .workshop__select-item-text,
+  .workshop__select-grid .workshop__select-item:nth-last-child(2) .workshop__select-item-text,
+  .workshop__select-grid .workshop__select-item:nth-last-child(1) .workshop__select-item-text {
+    width: 280px;
+  }
+}
+.workshop__select-item {
+  width: -moz-max-content;
+  width: max-content;
 }
 .workshop__select-item-title {
-  margin-bottom: 10px;
-  font-size: 16px;
   font-weight: 700;
   color: var(--text-p);
 }
+@media (min-width: 1440px) {
+  .workshop__select-item-title {
+    margin-bottom: 0.6944444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__select-item-title {
+    margin-bottom: calc(10px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__select-item-title {
+    margin-bottom: calc(10px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__select-item-title {
+    margin-bottom: calc(10px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__select-item-title {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__select-item-title {
+    font-size: 1.1111111111vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__select-item-title {
+    font-size: calc(16px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__select-item-title {
+    font-size: calc(16px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__select-item-title {
+    font-size: calc(16px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__select-item-title {
+    font-size: 16px;
+  }
+}
 .workshop__select-item hr {
-  margin-bottom: 20px;
-  width: 200px;
-  height: 1px;
   background-color: var(--border-assurance);
 }
-.workshop__select-item-text {
-  width: 215px;
+@media (min-width: 1440px) {
+  .workshop__select-item hr {
+    margin-bottom: 1.3888888889vw;
+  }
 }
-.workshop__stage {
-  margin-bottom: 160px;
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__select-item hr {
+    margin-bottom: calc(20px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
 }
-.workshop__stage-title {
-  margin-bottom: 100px;
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__select-item hr {
+    margin-bottom: calc(20px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__select-item hr {
+    margin-bottom: calc(20px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__select-item hr {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__select-item hr {
+    width: 13.8888888889vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__select-item hr {
+    width: calc(200px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__select-item hr {
+    width: calc(200px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__select-item hr {
+    width: calc(200px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__select-item hr {
+    width: 200px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__select-item hr {
+    height: 0.0694444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__select-item hr {
+    height: calc(1px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__select-item hr {
+    height: calc(1px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__select-item hr {
+    height: calc(1px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__select-item hr {
+    height: 1px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__select-item-text {
+    width: 14.9305555556vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__select-item-text {
+    width: calc(215px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__select-item-text {
+    width: calc(215px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__select-item-text {
+    width: calc(215px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__select-item-text {
+    width: 215px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__stage {
+    margin-bottom: 11.1111111111vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage {
+    margin-bottom: calc(125px + 35 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage {
+    margin-bottom: calc(90px + 35 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage {
+    margin-bottom: calc(90px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage {
+    margin-bottom: 90px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__stage-title {
+    margin-bottom: 6.9444444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-title {
+    margin-bottom: calc(80px + 20 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-title {
+    margin-bottom: calc(60px + 20 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-title {
+    margin-bottom: calc(60px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage-title {
+    margin-bottom: 60px;
+  }
 }
 .workshop__stage-grid {
+  align-self: center;
   display: grid;
-  grid-template-columns: repeat(3, 33.29%);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  gap: 1px;
   border-left: solid var(--black-line);
-  border-left-width: 1px;
   border-top: solid var(--black-line);
-  border-top-width: 1px;
 }
-.workshop__stage-grid .workshop__stage-item:nth-last-child(3) .workshop__stage-text,
-.workshop__stage-grid .workshop__stage-item:nth-last-child(2) .workshop__stage-text,
-.workshop__stage-grid .workshop__stage-item:nth-last-child(1) .workshop__stage-text {
-  width: 232px;
+@media (min-width: 1440px) {
+  .workshop__stage-grid {
+    border-left-width: 0.0694444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-grid {
+    border-left-width: calc(1px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-grid {
+    border-left-width: calc(1px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-grid {
+    border-left-width: calc(1px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage-grid {
+    border-left-width: 1px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__stage-grid {
+    border-top-width: 0.0694444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-grid {
+    border-top-width: calc(1px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-grid {
+    border-top-width: calc(1px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-grid {
+    border-top-width: calc(1px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage-grid {
+    border-top-width: 1px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__stage-grid .workshop__stage-item:nth-last-child(3) .workshop__stage-text,
+  .workshop__stage-grid .workshop__stage-item:nth-last-child(2) .workshop__stage-text,
+  .workshop__stage-grid .workshop__stage-item:nth-last-child(1) .workshop__stage-text {
+    width: 16.1111111111vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-grid .workshop__stage-item:nth-last-child(3) .workshop__stage-text,
+  .workshop__stage-grid .workshop__stage-item:nth-last-child(2) .workshop__stage-text,
+  .workshop__stage-grid .workshop__stage-item:nth-last-child(1) .workshop__stage-text {
+    width: calc(232px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-grid .workshop__stage-item:nth-last-child(3) .workshop__stage-text,
+  .workshop__stage-grid .workshop__stage-item:nth-last-child(2) .workshop__stage-text,
+  .workshop__stage-grid .workshop__stage-item:nth-last-child(1) .workshop__stage-text {
+    width: calc(232px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-grid .workshop__stage-item:nth-last-child(3) .workshop__stage-text,
+  .workshop__stage-grid .workshop__stage-item:nth-last-child(2) .workshop__stage-text,
+  .workshop__stage-grid .workshop__stage-item:nth-last-child(1) .workshop__stage-text {
+    width: calc(232px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage-grid .workshop__stage-item:nth-last-child(3) .workshop__stage-text,
+  .workshop__stage-grid .workshop__stage-item:nth-last-child(2) .workshop__stage-text,
+  .workshop__stage-grid .workshop__stage-item:nth-last-child(1) .workshop__stage-text {
+    width: 232px;
+  }
 }
 .workshop__stage-item {
-  height: 140px;
-  padding-left: 40px;
-  padding-bottom: 30px;
   display: flex;
   align-items: end;
   background-color: var(--bg-main);
   border-right: solid var(--black-line);
-  border-right-width: 1px;
   border-bottom: solid var(--black-line);
-  border-bottom-width: 1px;
   position: relative;
+}
+@media (min-width: 1440px) {
+  .workshop__stage-item {
+    height: 9.7222222222vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-item {
+    height: calc(140px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-item {
+    height: calc(140px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-item {
+    height: calc(140px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage-item {
+    height: 140px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__stage-item {
+    padding-left: 2.7777777778vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-item {
+    padding-left: calc(30px + 10 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-item {
+    padding-left: calc(20px + 10 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-item {
+    padding-left: calc(20px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage-item {
+    padding-left: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__stage-item {
+    padding-bottom: 2.0833333333vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-item {
+    padding-bottom: calc(25px + 5 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-item {
+    padding-bottom: calc(20px + 5 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-item {
+    padding-bottom: calc(20px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage-item {
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__stage-item {
+    border-right-width: 0.0694444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-item {
+    border-right-width: calc(1px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-item {
+    border-right-width: calc(1px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-item {
+    border-right-width: calc(1px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage-item {
+    border-right-width: 1px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__stage-item {
+    border-bottom-width: 0.0694444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-item {
+    border-bottom-width: calc(1px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-item {
+    border-bottom-width: calc(1px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-item {
+    border-bottom-width: calc(1px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage-item {
+    border-bottom-width: 1px;
+  }
 }
 .workshop__stage-item::after {
   content: attr(data-index);
   display: inline-block;
-  height: 72px;
   width: -moz-max-content;
   width: max-content;
   position: absolute;
-  top: 10px;
-  right: 40px;
-  font-size: 48px;
   font-family: "TS";
   color: var(--text-h);
 }
-.workshop__stage-text {
-  width: 200px;
+@media (min-width: 1440px) {
+  .workshop__stage-item::after {
+    height: 5vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-item::after {
+    height: calc(72px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-item::after {
+    height: calc(72px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-item::after {
+    height: calc(72px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage-item::after {
+    height: 72px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__stage-item::after {
+    line-height: 5vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-item::after {
+    line-height: calc(72px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-item::after {
+    line-height: calc(72px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-item::after {
+    line-height: calc(72px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage-item::after {
+    line-height: 72px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__stage-item::after {
+    top: 0.6944444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-item::after {
+    top: calc(6px + 4 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-item::after {
+    top: calc(3px + 3 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-item::after {
+    top: calc(3px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage-item::after {
+    top: 3px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__stage-item::after {
+    right: 2.7777777778vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-item::after {
+    right: calc(30px + 10 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-item::after {
+    right: calc(20px + 10 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-item::after {
+    right: calc(20px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage-item::after {
+    right: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__stage-item::after {
+    font-size: 3.3333333333vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-item::after {
+    font-size: calc(48px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-item::after {
+    font-size: calc(48px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-item::after {
+    font-size: calc(48px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage-item::after {
+    font-size: 48px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__stage-text {
+    width: 13.8888888889vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-text {
+    width: calc(200px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-text {
+    width: calc(200px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-text {
+    width: calc(200px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__stage-text {
+    width: 200px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__comment {
+    margin-bottom: 7.6388888889vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__comment {
+    margin-bottom: calc(85px + 25 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__comment {
+    margin-bottom: calc(60px + 25 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__comment {
+    margin-bottom: calc(60px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__comment {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__comment {
+    margin-left: -9.7222222222vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__comment {
+    margin-left: calc(-30px + -110 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__comment {
+    margin-left: calc(-30px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__comment {
+    margin-left: calc(-30px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__comment {
+    margin-left: -30px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__comment {
+    margin-right: -9.7222222222vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__comment {
+    margin-right: calc(-30px + -110 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__comment {
+    margin-right: calc(-30px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__comment {
+    margin-right: calc(-30px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__comment {
+    margin-right: -30px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__comment .swiper {
+    padding-left: 9.7222222222vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__comment .swiper {
+    padding-left: calc(30px + 110 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__comment .swiper {
+    padding-left: calc(30px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__comment .swiper {
+    padding-left: calc(30px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__comment .swiper {
+    padding-left: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__comment .swiper {
+    padding-right: 9.7222222222vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__comment .swiper {
+    padding-right: calc(30px + 110 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__comment .swiper {
+    padding-right: calc(30px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__comment .swiper {
+    padding-right: calc(30px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__comment .swiper {
+    padding-right: 30px;
+  }
+}
+.workshop__comment .swiper-slide img {
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 1440px) {
+  .workshop__comment .swiper-slide img {
+    max-height: 25.6944444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__comment .swiper-slide img {
+    max-height: calc(370px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__comment .swiper-slide img {
+    max-height: calc(370px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__comment .swiper-slide img {
+    max-height: calc(370px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__comment .swiper-slide img {
+    max-height: 370px;
+  }
+}
+@media (min-width: 1440px) {
+  .workshop__comment-title {
+    margin-bottom: 6.9444444444vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__comment-title {
+    margin-bottom: calc(80px + 20 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__comment-title {
+    margin-bottom: calc(60px + 20 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .workshop__comment-title {
+    margin-bottom: calc(60px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .workshop__comment-title {
+    margin-bottom: 60px;
+  }
 }
 
+@media (max-width: 1024px) {
+  .workshop__comment .swiper {
+    overflow: hidden !important;
+  }
+  .workshop__select {
+    display: flex;
+    flex-direction: column;
+  }
+  .workshop__select-grid {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+@media (max-width: 1024px) and (min-width: 1440px) {
+  .workshop__select-item {
+    width: 25.3472222222vw;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__select-item {
+    width: calc(365px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__select-item {
+    width: calc(365px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 767px) and (min-width: 320px) {
+  .workshop__select-item {
+    width: calc(365px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 1024px) and (max-width: 375px) {
+  .workshop__select-item {
+    width: 365px;
+  }
+}
+@media (max-width: 1024px) {
+  .workshop__stage {
+    display: flex;
+    flex-direction: column;
+  }
+  .workshop__stage-grid {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+@media (max-width: 1024px) and (min-width: 1440px) {
+  .workshop__stage-item {
+    width: 25.3472222222vw;
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__stage-item {
+    width: calc(365px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__stage-item {
+    width: calc(365px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 1024px) and (max-width: 767px) and (min-width: 320px) {
+  .workshop__stage-item {
+    width: calc(365px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 1024px) and (max-width: 375px) {
+  .workshop__stage-item {
+    width: 365px;
+  }
+}
+@media (max-width: 768px) {
+  .workshop__select-grid {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: auto;
+    justify-items: center;
+  }
+  .workshop__stage-grid {
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: auto;
+  }
+}
+@media (max-width: 425px) {
+  .workshop__intro {
+    align-items: start;
+  }
+  .workshop__intro-title {
+    align-items: start;
+  }
+  .workshop__intro-button {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) and (min-width: 1440px) {
+  .workshop__select-title {
+    max-width: 17.3611111111vw;
+  }
+}
+@media screen and (max-width: 425px) and (max-width: 1439px) and (min-width: 1280px) {
+  .workshop__select-title {
+    max-width: calc(250px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 425px) and (max-width: 1279px) and (min-width: 768px) {
+  .workshop__select-title {
+    max-width: calc(250px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 425px) and (max-width: 767px) and (min-width: 320px) {
+  .workshop__select-title {
+    max-width: calc(250px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 425px) and (max-width: 375px) {
+  .workshop__select-title {
+    max-width: 250px;
+  }
+}
+@media (max-width: 425px) {
+  .workshop__select-grid {
+    width: 100%;
+  }
+  .workshop__select-item {
+    width: 100% !important;
+  }
+  .workshop__stage-grid {
+    width: 100%;
+  }
+  .workshop__stage-item {
+    width: 100% !important;
+  }
+}
 :root {
   --text-p: #323232;
   --text-h: #57463A;
@@ -6104,52 +7266,52 @@ body {
 }
 
 @media (min-width: 1440px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap, .workshop__comment-title {
     padding-right: 9.7222222222vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap, .workshop__comment-title {
     padding-right: calc(30px + 110 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap, .workshop__comment-title {
     padding-right: calc(30px + 0 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap, .workshop__comment-title {
     padding-right: calc(30px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap, .workshop__comment-title {
     padding-right: 30px;
   }
 }
 @media (min-width: 1440px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap, .workshop__comment-title {
     padding-left: 9.7222222222vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap, .workshop__comment-title {
     padding-left: calc(30px + 110 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap, .workshop__comment-title {
     padding-left: calc(30px + 0 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap, .workshop__comment-title {
     padding-left: calc(30px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
-  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap {
+  .content, .header__content, .footer__content, .firm__content, .family__title, .family__video-wrap, .services__title, .assurance__content, .works__block, .techniques__info, .types__content, .about-us__content, .workshop__wrap, .workshop__comment-title {
     padding-left: 30px;
   }
 }
@@ -6264,4 +7426,10 @@ p, a, li {
 }
 .feedback__button {
   align-self: center;
+}
+
+@media (max-width: 425px) {
+  .feedback__button {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

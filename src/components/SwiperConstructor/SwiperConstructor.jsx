@@ -7,17 +7,21 @@ export default function SwiperConstructor(props) {
 
   return (
     <Swiper
-      spaceBetween={28}
+      spaceBetween={30}
+      freeMode={true}
       breakpoints={{
-        768: {
+        375: {
+          slidesPerView: 1
+        },
+        480: {
           slidesPerView: 2
         },
-        1024: {
+        768: {
           slidesPerView: 3
         },
-        1440: {
+        1024: {
           slidesPerView: 4
-        }
+        },
       }}
     >
       {data.map((v, i) => (
