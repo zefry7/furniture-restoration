@@ -5,8 +5,27 @@ import { UserContext } from "../..";
 
 function AboutUs(props) {
     const data2 = useContext(UserContext)
-
     const data = props.data
+
+    const settingSwiperMedia = {
+        spaceBetween: 30,
+        slidesPerView: 3,
+        breakpoints: {
+            375: {
+                slidesPerView: 1
+            },
+            480: {
+                slidesPerView: 2
+            },
+            768: {
+                slidesPerView: 3
+            },
+            1024: {
+                slidesPerView: 4
+            },
+        }
+    }
+
     return <section className="about-us">
         <div className="about-us__content">
             <h1 className="about-us__title">{data?.titles[0]?.p1}<span>{data?.titles[0]?.p2}</span></h1>
@@ -40,7 +59,7 @@ function AboutUs(props) {
             <div className="about-us__media">
                 <h2 className="about-us__media-title">{data?.titles[2]}</h2>
                 <p className="about-us__media-text">{data?.mediaText}</p>
-                <SwiperConstructor data={data?.mediaItems} />
+                <SwiperConstructor setting={settingSwiperMedia} data={data?.mediaItems} />
             </div>
             <div className="feedback">
                 <h2 className="feedback__title">{data2.feedback.title}</h2>

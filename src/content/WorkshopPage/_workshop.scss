@@ -82,6 +82,61 @@
             }
         }
     }
+    &__portfolio {
+        display: flex;
+        flex-direction: column;
+        @include adap(margin-bottom, 160, 125, 90);
+        &-title {
+            @include adap(margin-bottom, 100, 80, 60);
+        }
+        &-wrap {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            @include adap(gap, 21);
+        }
+        &-main-img {
+            align-self: center;
+            @include adap(width, 820, 700, 550);
+            img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 2/2;
+            }
+        }
+
+        &-block {
+            align-self: center;
+            @include adap(width, 920, 800, 650);
+            @include adap(gap, 20);
+            display: flex;
+            align-items: center;
+        }
+
+        &-prev,
+        &-next {
+            @include adap(height, 30);
+            @include adap(min-width, 30);
+            border-radius: 50%;
+            border: solid var(--black-line);
+            @include adap(border-width, 1);
+            background: url("./img/arrow.svg") center/ 100% 100% no-repeat;
+        }
+        &-next {
+            transform: rotateZ(180deg);
+        }
+
+        .swiper {
+            margin: 0;
+            &-slide {
+                aspect-ratio: 2/2;
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
     &__stage {
         @include adap(margin-bottom, 160, 125, 90);
         &-title {
@@ -144,9 +199,10 @@
             @include adap(padding-right, 140, 30);
             &-slide {
                 img {
-                    @include adap(max-height, 370);
-                    max-width: 100%;
-                    height: auto;
+                    @include adap(max-height, 400);
+                    @include adap(max-width, 270);
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }
@@ -202,6 +258,14 @@
             &-grid {
                 grid-template-columns: repeat(1, 100%);
                 grid-template-rows: auto;
+            }
+        }
+        &__portfolio {
+            &-wrap {
+                width: 100%;
+            }
+            &-block {
+                width: 100%;
             }
         }
     }

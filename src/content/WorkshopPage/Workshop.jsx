@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useCallback, useContext, useRef, useState, useEffect } from "react";
 import MyButton from "../../components/MyButton/MyButton";
 import { UserContext } from "../..";
 import SwiperConstructor from "../../components/SwiperConstructor/SwiperConstructor";
@@ -6,6 +6,76 @@ import SwiperConstructor from "../../components/SwiperConstructor/SwiperConstruc
 function Workshop() {
     const feedbackData = useContext(UserContext).feedback;
     const data = useContext(UserContext).workshop;
+    const srcImg = useRef(data.portfolio.imgs[0].src)
+    const [img, setImg] = useState(srcImg.current)
+    const [activeMainImg, setActiveMainImg] = useState(true)
+
+    const settingSwiperComment = {
+        spaceBetween: 30,
+        slidesPerView: 3,
+        breakpoints: {
+            375: {
+                slidesPerView: 1
+            },
+            480: {
+                slidesPerView: 2
+            },
+            768: {
+                slidesPerView: 3
+            },
+            1024: {
+                slidesPerView: 4
+            },
+            1920: {
+                slidesPerView: 5
+            }
+        }
+    }
+
+    const settingSwiperPortfolio = {
+        spaceBetween: 16,
+        loop: true,
+        navigation: {
+            prevEl: ".workshop__portfolio-prev",
+            nextEl: ".workshop__portfolio-next",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            769: {
+                slidesPerView: 5,
+            },
+        },
+        className: "workshop__portfolio-swiper"
+    }
+
+    useEffect(() => {
+        window.addEventListener("load", () => {
+            const sizeWindow = window.innerWidth;
+            if (sizeWindow <= 768) {
+                setActiveMainImg(false)
+            } else {
+                setActiveMainImg(true)
+            }
+        })
+        window.addEventListener("resize", () => {
+            const sizeWindow = window.innerWidth;
+            if (sizeWindow <= 768) {
+                setActiveMainImg(false)
+            } else {
+                setActiveMainImg(true)
+            }
+        })
+    }, [])
+
+    const changeImg = useCallback(() => {
+        const el = document.querySelector(".workshop__portfolio .swiper-slide-active")
+        if (el) {
+            srcImg.current = el.children[0].src
+            setImg(srcImg.current)
+        }
+    }, [])
 
     return <section className="workshop">
         <div className="workshop__content">
@@ -27,6 +97,25 @@ function Workshop() {
                         ))}
                     </div>
                 </div>
+                <div className="workshop__portfolio">
+                    <h2 className="workshop__portfolio-title">{data.portfolio.title}</h2>
+                    <div className="workshop__portfolio-wrap">
+                        {activeMainImg &&
+                            <div className="workshop__portfolio-main-img">
+                                <img src={img} alt="" />
+                            </div>
+                        }
+                        <div className="workshop__portfolio-block">
+                            {activeMainImg &&
+                                <div className="workshop__portfolio-prev"></div>
+                            }
+                            <SwiperConstructor funChange={changeImg} setting={settingSwiperPortfolio} data={data.portfolio.imgs} />
+                            {activeMainImg &&
+                                <div className="workshop__portfolio-next"></div>
+                            }
+                        </div>
+                    </div>
+                </div>
                 <div className="workshop__stage">
                     <h2 className="workshop__stage-title">{data.stage.title}</h2>
                     <div className="workshop__stage-grid">
@@ -39,7 +128,7 @@ function Workshop() {
                 </div>
                 <div className="workshop__comment">
                     <h2 className="workshop__comment-title">{data.comment.title}</h2>
-                    <SwiperConstructor data={data.comment.img} />
+                    <SwiperConstructor setting={settingSwiperComment} data={data.comment.img} />
                 </div>
                 <div className="feedback">
                     <h2 className="feedback__title">{feedbackData.title}</h2>

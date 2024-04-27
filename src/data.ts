@@ -417,7 +417,33 @@ export let data = {
             ]
         },
         portfolio: {
-
+            title: "Портфолио",
+            imgs: [
+                {
+                    src: "./img/Workshop/portfolio-1.jpeg",
+                    alt: "Работа из портфолио"
+                },
+                {
+                    src: "./img/Workshop/portfolio-2.jpeg",
+                    alt: "Работа из портфолио"
+                },
+                {
+                    src: "./img/Workshop/portfolio-3.jpeg",
+                    alt: "Работа из портфолио"
+                },
+                {
+                    src: "./img/Workshop/portfolio-4.jpeg",
+                    alt: "Работа из портфолио"
+                },
+                {
+                    src: "./img/Workshop/portfolio-5.jpeg",
+                    alt: "Работа из портфолио"
+                },
+                {
+                    src: "./img/Workshop/portfolio-6.jpeg",
+                    alt: "Работа из портфолио"
+                },
+            ]
         },
         stage: {
             title: "Этапы производства",

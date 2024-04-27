@@ -1,34 +1,25 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
+import { memo } from 'react';
+import { Navigation } from 'swiper/modules';
 
-export default function SwiperConstructor(props) {
+export default memo(function SwiperConstructor(props) {
   const data = props?.data;
+  const settingSwiper = props?.setting;
+  const funChange = props?.funChange
 
   return (
     <Swiper
-      spaceBetween={30}
-      freeMode={true}
-      breakpoints={{
-        375: {
-          slidesPerView: 1
-        },
-        480: {
-          slidesPerView: 2
-        },
-        768: {
-          slidesPerView: 3
-        },
-        1024: {
-          slidesPerView: 4
-        },
-      }}
+      {...settingSwiper}
+      onSlideChangeTransitionEnd={() => funChange ? funChange() : ""}
+      modules={[Navigation]}
     >
-      {data.map((v, i) => (
+      {data?.map((v, i) => (
         <SwiperSlide key={i}>
           <img src={v?.src} alt={v?.alt} />
         </SwiperSlide>
       ))}
     </Swiper>
   );
-};
+});
