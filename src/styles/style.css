@@ -92,89 +92,90 @@ p {
   cursor: default;
 }
 
-button {
+.button {
+  display: block;
   font-family: "OS";
   line-height: 150%;
-  color: var(--button-text);
+  color: var(--button-text) !important;
   position: relative;
   transition: transform linear 0.1s;
 }
 @media (min-width: 1440px) {
-  button {
+  .button {
     width: 17.0138888889vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
-  button {
+  .button {
     width: calc(245px + 0 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
-  button {
+  .button {
     width: calc(245px + 0 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  button {
+  .button {
     width: calc(245px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
-  button {
+  .button {
     width: 245px;
   }
 }
 @media (min-width: 1440px) {
-  button {
+  .button {
     height: 4.1666666667vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
-  button {
+  .button {
     height: calc(60px + 0 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
-  button {
+  .button {
     height: calc(60px + 0 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  button {
+  .button {
     height: calc(60px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
-  button {
+  .button {
     height: 60px;
   }
 }
 @media (min-width: 1440px) {
-  button {
+  .button {
     font-size: 1.1111111111vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
-  button {
+  .button {
     font-size: calc(16px + 0 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
-  button {
+  .button {
     font-size: calc(16px + 0 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
-  button {
+  .button {
     font-size: calc(16px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
-  button {
+  .button {
     font-size: 16px;
   }
 }
-button::before {
+.button::before {
   content: attr(data-text);
   display: flex;
   align-items: center;
@@ -190,7 +191,7 @@ button::before {
   z-index: 5;
   opacity: 0;
 }
-button::after {
+.button::after {
   content: attr(data-text);
   display: flex;
   align-items: center;
@@ -206,15 +207,15 @@ button::after {
   z-index: 4;
   opacity: 1;
 }
-button:hover::before {
+.button:hover::before {
   transform: rotateX(0) translateY(0%);
   opacity: 1;
 }
-button:hover::after {
+.button:hover::after {
   transform: rotateX(-90deg) translateY(100%);
   opacity: 0;
 }
-button:active {
+.button:active {
   transform: translateY(10%);
 }
 
@@ -312,7 +313,7 @@ button:active {
 .header__content::before {
   content: "";
   background-color: initial;
-  transition: all 0.2s linear;
+  transition: background-color 0.2s linear;
 }
 .header__links {
   height: 100%;
@@ -853,10 +854,13 @@ button:active {
     position: fixed;
     top: 0;
     z-index: 100;
-    height: 115vh;
+    min-height: -moz-min-content;
+    min-height: min-content;
+    height: 100vh;
     background-color: var(--bg-main);
     right: -100%;
     transition: right linear 0.2s;
+    overflow: scroll;
   }
 }
 @media (max-width: 768px) and (min-width: 1440px) {
@@ -957,6 +961,31 @@ button:active {
 @media (max-width: 768px) and (max-width: 375px) {
   .header__menu-content {
     padding-top: 30px;
+  }
+}
+@media (max-width: 768px) and (min-width: 1440px) {
+  .header__menu-content {
+    padding-bottom: 4.8611111111vw;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 1439px) and (min-width: 1280px) {
+  .header__menu-content {
+    padding-bottom: calc(70px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 1279px) and (min-width: 768px) {
+  .header__menu-content {
+    padding-bottom: calc(70px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 767px) and (min-width: 320px) {
+  .header__menu-content {
+    padding-bottom: calc(70px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 768px) and (max-width: 375px) {
+  .header__menu-content {
+    padding-bottom: 70px;
   }
 }
 @media (max-width: 768px) {
@@ -2105,35 +2134,35 @@ button:active {
 }
 @media (max-width: 1024px) and (min-width: 1440px) {
   .intro__main-img {
-    height: 29.1666666667vw;
+    height: 34.7222222222vw;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 1439px) and (min-width: 1280px) {
   .intro__main-img {
-    height: calc(420px + 0 * (100vw - 1280px) / (1440 - 1280));
+    height: calc(500px + 0 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 1279px) and (min-width: 768px) {
   .intro__main-img {
-    height: calc(420px + 0 * (100vw - 768px) / (1280 - 768));
+    height: calc(500px + 0 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 767px) and (min-width: 320px) {
   .intro__main-img {
-    height: calc(420px + 0 * (100vw - 320px) / (768 - 320));
+    height: calc(415px + 85 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 1024px) and (max-width: 375px) {
   .intro__main-img {
-    height: 420px;
+    height: 415px;
   }
 }
 @media (max-width: 1024px) {
   .intro__main-img img {
+    -o-object-position: center 65%;
+       object-position: center 65%;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
   }
   .intro__socials {
     justify-content: start;
@@ -2187,6 +2216,31 @@ button:active {
 @media (max-width: 375px) {
   .firm__content {
     padding-top: 90px;
+  }
+}
+@media (min-width: 1440px) {
+  .firm__content {
+    margin-bottom: 11.1111111111vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .firm__content {
+    margin-bottom: calc(125px + 35 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .firm__content {
+    margin-bottom: calc(90px + 35 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .firm__content {
+    margin-bottom: calc(90px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .firm__content {
+    margin-bottom: 90px;
   }
 }
 @media (min-width: 1440px) {
@@ -2499,60 +2553,11 @@ button:active {
 }
 .firm__block {
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(2, auto);
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   background-color: black;
   border: solid black;
-}
-@media (min-width: 1440px) {
-  .firm__block {
-    margin-bottom: 11.1111111111vw;
-  }
-}
-@media screen and (max-width: 1439px) and (min-width: 1280px) {
-  .firm__block {
-    margin-bottom: calc(125px + 35 * (100vw - 1280px) / (1440 - 1280));
-  }
-}
-@media screen and (max-width: 1279px) and (min-width: 768px) {
-  .firm__block {
-    margin-bottom: calc(90px + 35 * (100vw - 768px) / (1280 - 768));
-  }
-}
-@media screen and (max-width: 767px) and (min-width: 320px) {
-  .firm__block {
-    margin-bottom: calc(90px + 0 * (100vw - 320px) / (768 - 320));
-  }
-}
-@media (max-width: 375px) {
-  .firm__block {
-    margin-bottom: 90px;
-  }
-}
-@media (min-width: 1440px) {
-  .firm__block {
-    max-width: 80.5555555556vw;
-  }
-}
-@media screen and (max-width: 1439px) and (min-width: 1280px) {
-  .firm__block {
-    max-width: calc(1160px + 0 * (100vw - 1280px) / (1440 - 1280));
-  }
-}
-@media screen and (max-width: 1279px) and (min-width: 768px) {
-  .firm__block {
-    max-width: calc(1160px + 0 * (100vw - 768px) / (1280 - 768));
-  }
-}
-@media screen and (max-width: 767px) and (min-width: 320px) {
-  .firm__block {
-    max-width: calc(1160px + 0 * (100vw - 320px) / (768 - 320));
-  }
-}
-@media (max-width: 375px) {
-  .firm__block {
-    max-width: 1160px;
-  }
 }
 @media (min-width: 1440px) {
   .firm__block {
@@ -2566,17 +2571,17 @@ button:active {
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
   .firm__block {
-    height: calc(502px + 0 * (100vw - 768px) / (1280 - 768));
+    height: calc(420px + 82 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
   .firm__block {
-    height: calc(502px + 0 * (100vw - 320px) / (768 - 320));
+    height: calc(420px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
   .firm__block {
-    height: 502px;
+    height: 420px;
   }
 }
 @media (min-width: 1440px) {
@@ -2637,7 +2642,32 @@ button:active {
   background-color: var(--bg-main);
 }
 .firm__item-img {
-  margin-bottom: 20px;
+  cursor: pointer;
+}
+@media (min-width: 1440px) {
+  .firm__item-img {
+    margin-bottom: 1.3888888889vw;
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 1280px) {
+  .firm__item-img {
+    margin-bottom: calc(20px + 0 * (100vw - 1280px) / (1440 - 1280));
+  }
+}
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+  .firm__item-img {
+    margin-bottom: calc(20px + 0 * (100vw - 768px) / (1280 - 768));
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .firm__item-img {
+    margin-bottom: calc(20px + 0 * (100vw - 320px) / (768 - 320));
+  }
+}
+@media (max-width: 375px) {
+  .firm__item-img {
+    margin-bottom: 20px;
+  }
 }
 @media (min-width: 1440px) {
   .firm__item-img {
@@ -2709,7 +2739,7 @@ button:active {
   .firm__block {
     margin-left: auto;
     margin-right: auto;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
   }
 }
@@ -2740,27 +2770,27 @@ button:active {
 }
 @media (max-width: 768px) and (min-width: 1440px) {
   .firm__block {
-    height: 50.9027777778vw;
+    height: 55.5555555556vw;
   }
 }
 @media screen and (max-width: 768px) and (max-width: 1439px) and (min-width: 1280px) {
   .firm__block {
-    height: calc(733px + 0 * (100vw - 1280px) / (1440 - 1280));
+    height: calc(800px + 0 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 768px) and (max-width: 1279px) and (min-width: 768px) {
   .firm__block {
-    height: calc(733px + 0 * (100vw - 768px) / (1280 - 768));
+    height: calc(800px + 0 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 768px) and (max-width: 767px) and (min-width: 320px) {
   .firm__block {
-    height: calc(733px + 0 * (100vw - 320px) / (768 - 320));
+    height: calc(800px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 768px) and (max-width: 375px) {
   .firm__block {
-    height: 733px;
+    height: 800px;
   }
 }
 @media (max-width: 425px) and (min-width: 1440px) {
@@ -7557,6 +7587,10 @@ button:active {
   min-width: 375px;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   background-color: var(--bg-main);
 }
@@ -7722,6 +7756,10 @@ p, a, li {
 }
 .feedback__button {
   align-self: center;
+}
+
+.scroll-lock {
+  overflow: hidden;
 }
 
 @media (max-width: 425px) {

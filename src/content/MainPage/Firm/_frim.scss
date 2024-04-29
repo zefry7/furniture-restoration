@@ -2,6 +2,7 @@
     &__content {
         @extend .content;
         @include adap(padding-top, 160, 125, 90);
+        @include adap(margin-bottom, 160, 125, 90);
     }
     &__title-1 {
         @include adap(font-size, 48, 40, 32);
@@ -28,12 +29,11 @@
         @include adap(margin-bottom, 100, 80, 60);
     }
     &__block {
-        @include adap(margin-bottom, 160, 125, 90);
         display: grid;
-        @include adap(max-width, 1160);
-        @include adap(height, 502);
-        grid-template-columns: repeat(4, auto);
-        grid-template-rows: repeat(2, auto);
+        width: 100%;
+        @include adap(height, 502, 502, 420);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         @include adap(grid-gap, 1);
         background-color: black;
         border: solid black;
@@ -46,9 +46,10 @@
         flex-direction: column;
         background-color: var(--bg-main);
         &-img {
-            margin-bottom: 20px;
+            @include adap(margin-bottom, 20);
             @include adap(height, 100);
             @include adap(width, 100);
+            cursor: pointer;
             img {
                 width: 100%;
                 height: auto;
@@ -76,10 +77,10 @@
         &__block {
             margin-left: auto;
             margin-right: auto;
-            grid-template-columns: repeat(2, auto);
+            grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(4, auto);
             @include adap(max-width, 500);
-            @include adap(height, 733);
+            @include adap(height, 800);
         }
     }
 }

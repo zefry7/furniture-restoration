@@ -1,10 +1,11 @@
-button {
+.button {
+    display: block;
     @include adap(width, 245);
     @include adap(height, 60);
     @include adap(font-size, 16);
     font-family: "OS";
     line-height: 150%;
-    color: var(--button-text);
+    color: var(--button-text) !important;
     position: relative;
     transition: transform linear 0.1s;
     &::before {
@@ -52,4 +53,5 @@ button {
     &:active {
         transform: translateY(10%);
     }
+
 }

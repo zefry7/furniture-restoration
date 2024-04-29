@@ -93,11 +93,11 @@
             grid-template-columns: 1fr;
         }
         &__main-img {
-            @include adap(height, 420);
+            @include adap(height, 500, 500, 500, 415);
             grid-area: 2;
             img {
+                object-position: center 65%;
                 object-fit: cover;
-                object-position: center;
             }
         }
         &__socials {

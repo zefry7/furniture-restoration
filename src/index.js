@@ -20,7 +20,7 @@ root.render(
   <UserContext.Provider value={data}>
     <BrowserRouter basename={`${url[1]}/`}>
       <Routes>
-        <Route path="/" element={<Layout data={data.layout} />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<MainPage data={data.mainPage} />} />
           <Route path="master-class" element={<MasterClassPage data={data.masterClassPage} />} />
           <Route path='about-us' element={<AboutUs data={data.aboutUs} />} />

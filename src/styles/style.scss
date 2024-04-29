@@ -36,6 +36,10 @@
     min-width: 375px;
 }
 
+html {
+    scrollbar-gutter: stable;
+}
+
 body {
     background-color: var(--bg-main);
 }
@@ -86,6 +90,10 @@ p, a, li {
     &__button {
         align-self: center;
     }
+}
+
+.scroll-lock {
+    overflow: hidden;
 }
 
 @media (max-width: 425px) {

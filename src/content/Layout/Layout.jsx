@@ -4,12 +4,12 @@ import Footer from "./Footer/Footer";
 import { Outlet } from 'react-router-dom';
 
 
-function Layout(props) {
+function Layout() {
     return (
         <>
-            <Header data={props.data.header}/>
+            <Header/>
             <Outlet />
-            <Footer data={props.data.footer}/>
+            <Footer/>
         </>
     )
 }

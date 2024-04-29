@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "../../..";
 
-
-function Footer(props) {
-    const data = props.data;
+function Footer() {
+    const data = useContext(UserContext).footer
 
     const moveUp = (e) => {
-
         window.scrollTo({
             top: 0,
             behavior: "smooth"
@@ -17,11 +16,11 @@ function Footer(props) {
         <footer className="footer" id="section-footer">
             <div className="footer__content">
                 <p className="footer__inn">
-                    <span>{data.ip}</span>
-                    <span>{data.inn}</span>
+                    <span>{data?.ip}</span>
+                    <span>{data?.inn}</span>
                 </p>
                 <div className="footer__content-center">
-                    {data.links.map((value, index) => (
+                    {data?.links.map((value, index) => (
                         <div className="footer__links" key={index}>
                             <Link to={value[0]?.href} className="footer__link" key={index} onClick={(e) => moveUp(e)}>{value[0]?.text}</Link>
                             <Link to={value[1]?.href} className="footer__link" key={index + 3} onClick={(e) => moveUp(e)}>{value[1]?.text}</Link>
@@ -29,9 +28,9 @@ function Footer(props) {
                     ))}
                 </div>
                 <div className="footer__socials">
-                    {data.socials.map((value, index) => (
+                    {data?.socials.map((value, index) => (
                         <div className="footer__socials-item" key={index}>
-                            <img src={value.img} alt={value.alt} />
+                            <img src={value?.img} alt={value?.alt} />
                         </div>
                     ))}
                 </div>

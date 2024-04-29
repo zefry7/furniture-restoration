@@ -9,8 +9,8 @@ function MainPage(props) {
     const data = props.data
     return (
         <>
-            <Intro data={data.intro}/>
-            <Firm data={data.firm}/>
+            <Intro/>
+            <Firm />
             <Family data={data.family}/>
             <Services data={data.services}/>
             <Assurance data={data.assurance} />

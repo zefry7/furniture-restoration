@@ -1,90 +1,93 @@
 import { Workshop } from "./content/import_ts";
 
-export let data = {
-    layout: {
-        header: {
-            links: [
-                {
-                    text: "Мастер-классы",
-                    href: "/master-class"
-                },
-                {
-                    text: "Контакты",
-                    dataSection: "section-footer"
-                },
-                {
-                    text: "Мебель на заказ",
-                    href: "/workshop"
-                },
-                {
-                    text: "О нас",
-                    href: "/about-us"
-                }],
-            logo: {
-                img: "./img/Layout/logo.webp",
-                alt: "Логотип"
+export const data = {
+    header: {
+        links: [
+            {
+                text: "Мастер-классы",
+                href: "/master-class"
+            },
+            {
+                text: "Контакты",
+                dataSection: "section-footer"
+            },
+            {
+                text: "Мебель на заказ",
+                href: "/workshop"
+            },
+            {
+                text: "О нас",
+                href: "/about-us"
+            }],
+        logo: {
+            src: "./img/Layout/logo.webp",
+            alt: "Логотип"
+        }
+    },
+    footer: {
+        ip: "ИП Колодезников-Матчитов Н.И.",
+        inn: "ИНН 111111111111",
+        links: [
+            [{
+                text: "Мастер-классы",
+                href: "/master-class"
+            }, {
+                text: "Мебель на заказ",
+                href: "/workshop"
+            }],
+            [{
+                text: "Контакты",
+                href: "/"
+            }, {
+                text: "О нас",
+                href: "/about-us"
+            }],
+            [{
+                text: "Политика кофиденциальности",
+                href: "/"
+            }, {
+                text: "Договор оферты",
+                href: "/"
+            }]
+        ],
+        socials: [
+            {
+                img: "./img/Layout/social-icon-3.svg",
+                alt: "Социальная сеть"
+            },
+            {
+                img: "./img/Layout/social-icon-2.svg",
+                alt: "Социальная сеть"
+            }, {
+                img: "./img/Layout/social-icon-1.svg",
+                alt: "Социальная сеть"
             }
-        },
-        footer: {
-            ip: "ИП Колодезников-Матчитов Н.И.",
-            inn: "ИНН 111111111111",
-            links: [
-                [{
-                    text: "Мастер-классы",
-                    href: "/master-class"
-                }, {
-                    text: "Мебель на заказ",
-                    href: "/workshop"
-                }],
-                [{
-                    text: "Контакты",
-                    href: "/"
-                }, {
-                    text: "О нас",
-                    href: "/about-us"
-                }],
-                [{
-                    text: "Политика кофиденциальности",
-                }, {
-                    text: "Договор оферты",
-                }]
-            ],
-            socials: [
-                {
-                    img: "./img/Layout/social-icon-3.svg",
-                    alt: "Социальная сеть"
-                },
-                {
-                    img: "./img/Layout/social-icon-2.svg",
-                    alt: "Социальная сеть"
-                }, {
-                    img: "./img/Layout/social-icon-1.svg",
-                    alt: "Социальная сеть"
-                }
-            ]
-        },
+        ]
     },
     mainPage: {
         intro: {
             label: "Столярная мастерская NIKASON BRAND",
             title: "Изготовление и реставрация мебели",
             subtitle: "Авторская мебель ручной работы, сделанная с душой и трепетом.",
-            button: "Смотреть услуги",
+            button: {
+                text: "Смотреть услуги",
+                href: "/workshop"
+            },
             icons: [
                 {
-                    img: "./img/MainPage/icon-tg.svg",
+                    src: "./img/MainPage/icon-tg.svg",
                     alt: "Социальная сеть"
                 },
                 {
-                    img: "./img/MainPage/icon-inst.svg",
+                    src: "./img/MainPage/icon-inst.svg",
                     alt: "Социальная сеть"
                 }, {
-                    img: "./img/MainPage/icon-wa.svg",
+                    src: "./img/MainPage/icon-wa.svg",
                     alt: "Социальная сеть"
                 }
             ],
             mainImg: {
-                img: "./img/MainPage/main.jpeg",
+                src: "./img/MainPage/main.jpeg",
                 alt: "Оформление"
             }
         },

@@ -10,7 +10,7 @@
         &::before {
             content: "";
             background-color: initial;
-            transition: all 0.2s linear;
+            transition: background-color 0.2s linear;
         }
     }
     &__links {
@@ -136,13 +136,16 @@
             top: 0;
             z-index: 100;
             @include adap(width, 270);
-            height: 115vh;
+            min-height: min-content;
+            height: 100vh;
             background-color: var(--bg-main);
             right: -100%;
             transition: right linear 0.2s;
             @include adap(padding-right, 30);
             @include adap(padding-left, 30);
             @include adap(padding-top, 30);
+            @include adap(padding-bottom, 70);
+            overflow: scroll;
         }
         &__menu-burger_active {
             right: 0;
