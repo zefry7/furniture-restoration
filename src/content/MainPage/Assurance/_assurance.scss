@@ -16,13 +16,13 @@
         @include adap(border-width, 1);
         outline: solid var(--outline-assurance);
         @include adap(outline-width, 7);
-        outline-offset: 5px;
+        @include adap(outline-offset, 5);
         position: relative;
     }
     &__title {
         @include adap(font-size, 48, 40, 30);
         @include adap(margin-bottom, 40, 40, 30);
-        @include adap(max-width, 650);
+        @include adap(max-width, 650, 600);
         text-align: center;
     }
     &__text {

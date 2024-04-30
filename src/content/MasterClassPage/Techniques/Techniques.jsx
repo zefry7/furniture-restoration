@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../../..";
 
-function Techniques(props) {
-    const data = props.data
+function Techniques() {
+    const data = useContext(UserContext)?.masterClassPage?.techniques
 
     return <section className="techniques">
         <div className="techniques__content">
             <div className="techniques__info">
-                <h2 className="techniques__title">{data.title}</h2>
+                <h2 className="techniques__title">{data?.title}</h2>
                 <ul className="techniques__list">
-                    {data.ul.map((v, i) => (
+                    {data?.ul.map((v, i) => (
                         <li className="techniques__item" key={i} data-index={i + 1}>
                             {v}
                         </li>
@@ -16,7 +17,7 @@ function Techniques(props) {
                 </ul>
             </div>
             <div className="techniques__block">
-                <h3 className="techniques__text">{data.text}</h3>
+                <h3 className="techniques__text">{data?.text}</h3>
             </div>
         </div>
     </section>

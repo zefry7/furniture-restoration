@@ -1,30 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../../..";
 
-function Types(props) {
-    const data = props.data
+function Types() {
+    const data = useContext(UserContext)?.masterClassPage?.types
 
     return <section className="types">
         <div className="types__content">
-            <h3 className="types__title">{data.title[0]}</h3>
+            <h3 className="types__title">{data?.title[0]}</h3>
             <div className="types__list">
-                {data.items.map((v, i) => (
+                {data?.items.map((v, i) => (
                     <div className="types__item" key={i}>
                         <div className="types__item-img">
-                            <img src={v.img.src} alt={v.img.src} />
+                            <img src={v?.img?.src} alt={v?.img?.src} />
                         </div>
-                        <p className="types__item-text">{v.text}</p>
+                        <p className="types__item-text">{v?.text}</p>
                     </div>
                 ))}
 
             </div>
-            <h3 className="types__title">{data.title[1]}</h3>
+            <h3 className="types__title">{data?.title[1]}</h3>
             <div className="types__block">
-                {data.example.map((v, i) => (
+                {data?.example.map((v, i) => (
                     <div className="types__block-wrap" key={i}>
                         <div className="types__block-img">
-                            <img src={v.img.src} alt={v.img.alt} />
+                            <img src={v?.img?.src} alt={v?.img?.alt} />
                         </div>
-                        <p className="types__block-text">{v.text}</p>
+                        <p className="types__block-text">{v?.text}</p>
                     </div>
                 ))}
             </div>

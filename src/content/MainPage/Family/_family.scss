@@ -19,7 +19,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: 65% center;
+            object-position: 70% center;
         }
     }
     &__info {
@@ -81,6 +81,9 @@
             .family__title:nth-child(3) {
                 @include adap(width, 500, 500, 500, 300);
             }
+        }
+        &__text {
+            @include adap(max-width, 768);
         }
     }
 }

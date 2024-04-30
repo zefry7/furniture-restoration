@@ -5,15 +5,16 @@ import Family from './Family/Family';
 import Services from "./Services/Services"
 import Assurance from './Assurance/Assurance';
 
-function MainPage(props) {
-    const data = props.data
+function MainPage() {
+    document.title = "Столярная мастерская NIKASON BRAND"
+
     return (
         <>
             <Intro/>
             <Firm />
-            <Family data={data.family}/>
-            <Services data={data.services}/>
-            <Assurance data={data.assurance} />
+            <Family/>
+            <Services/>
+            <Assurance/>
         </>
     );
 }

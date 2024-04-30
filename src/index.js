@@ -21,8 +21,8 @@ root.render(
     <BrowserRouter basename={`${url[1]}/`}>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<MainPage data={data.mainPage} />} />
-          <Route path="master-class" element={<MasterClassPage data={data.masterClassPage} />} />
+          <Route index element={<MainPage />} />
+          <Route path="master-class" element={<MasterClassPage />} />
           <Route path='about-us' element={<AboutUs data={data.aboutUs} />} />
           <Route path='workshop' element={<Workshop />} />
         </Route>

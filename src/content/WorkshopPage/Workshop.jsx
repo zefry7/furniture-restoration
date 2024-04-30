@@ -10,6 +10,8 @@ function Workshop() {
     const [img, setImg] = useState(srcImg.current)
     const [activeMainImg, setActiveMainImg] = useState(true)
 
+    document.title = "Мебель на заказ от NIKASON BRAND"
+
     const settingSwiperComment = {
         spaceBetween: 30,
         slidesPerView: 3,

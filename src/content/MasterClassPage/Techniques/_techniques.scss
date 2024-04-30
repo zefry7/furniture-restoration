@@ -7,10 +7,10 @@
         @include adap(margin-bottom, 160, 130, 100);
     }
     &__title {
-        @include adap(margin-bottom, 100, 100, 77);
+        @include adap(margin-bottom, 100, 100, 70);
     }
     &__list {
-        @include adap(margin-left, 340, 340, 120, 0);
+        @include adap(margin-left, 350, 350, 100, 0);
         display: flex;
         flex-direction: column;
         @include adap(gap, 54);
@@ -35,7 +35,7 @@
         &::before{
             content: attr(data-index);
             display: inline-block;
-            @include adap(margin-right, 48, 36, 24);
+            @include adap(margin-right, 43, 36, 24);
             @include adap(height, 60);
             @include adap(min-width, 60);
             @include adap(font-size, 24);
@@ -50,6 +50,7 @@
     &__block {
         @include adap(padding-left, 245, 135, 30);
         @include adap(padding-right, 245, 135, 30);
+        @include adap(max-height, 700);
         height: 100vh;
         background: url("./img/bg-2.jpeg") center/ cover;
         background-attachment: fixed;
@@ -60,5 +61,17 @@
     &__text {
         color: var(--white);
         text-align: center;
+    }
+}
+
+
+@media (max-width: 545px) {
+    .techniques {
+        &__title {
+            @include adap(width, 300);
+        }
+        &__list {
+            margin-left: 0;
+        }
     }
 }

@@ -7,6 +7,8 @@ function AboutUs(props) {
     const data2 = useContext(UserContext)
     const data = props.data
 
+    document.title = "История создания мастерской NIKASON BRAND"
+
     const settingSwiperMedia = {
         spaceBetween: 30,
         slidesPerView: 3,

@@ -3,13 +3,13 @@ import Works from "./Works/Works";
 import Techniques from "./Techniques/Techniques";
 import Types from "./Types/Types";
 
-function MasterClassPage(props) {
-    const data = props.data;
+function MasterClassPage() {
+    document.title = "Мастер-классы от NIKASON BRAND"
 
     return <>
-        <Works data={data.work}/>
-        <Techniques data={data.techniques} />
-        <Types data={data.types} />
+        <Works/>
+        <Techniques/>
+        <Types />
     </>
 }
 
