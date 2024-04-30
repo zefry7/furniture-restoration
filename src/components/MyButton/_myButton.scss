@@ -54,5 +54,10 @@
     &:active {
         transform: translateY(10%);
     }
+}
 
+@media (max-width: 425px) {
+    .button {
+        width: 100% !important;
+    }
 }

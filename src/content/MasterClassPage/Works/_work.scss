@@ -2,8 +2,7 @@
     &__info {
         @include adap(padding-left, 30);
         @include adap(padding-right, 30);
-        @include adap(max-height, 700);
-        height: 100vh;
+        @include adap(height, 700);
         width: 100%;
         display: flex;
         flex-direction: column;
