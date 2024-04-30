@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/furniture-restoration/static/css/main.e6df086b.css",
-    "main.js": "/furniture-restoration/static/js/main.0020d136.js",
+    "main.css": "/furniture-restoration/static/css/main.c1dc82eb.css",
+    "main.js": "/furniture-restoration/static/js/main.55814deb.js",
     "static/media/bg-1.jpeg": "/furniture-restoration/static/media/bg-1.8e84b3eeb040e51b55c3.jpeg",
     "static/media/bg-workshop.jpeg": "/furniture-restoration/static/media/bg-workshop.edef25e43adc8ee0abe6.jpeg",
     "static/media/bg-2.jpeg": "/furniture-restoration/static/media/bg-2.16335a45ca1d0fc86046.jpeg",
@@ -15,11 +15,11 @@
     "static/media/TenorSans.woff2": "/furniture-restoration/static/media/TenorSans.cf47ec70e5df8abfbc1c.woff2",
     "static/media/arrow.svg": "/furniture-restoration/static/media/arrow.fe1807faee252730abdf.svg",
     "index.html": "/furniture-restoration/index.html",
-    "main.e6df086b.css.map": "/furniture-restoration/static/css/main.e6df086b.css.map",
-    "main.0020d136.js.map": "/furniture-restoration/static/js/main.0020d136.js.map"
+    "main.c1dc82eb.css.map": "/furniture-restoration/static/css/main.c1dc82eb.css.map",
+    "main.55814deb.js.map": "/furniture-restoration/static/js/main.55814deb.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6df086b.css",
-    "static/js/main.0020d136.js"
+    "static/css/main.c1dc82eb.css",
+    "static/js/main.55814deb.js"
   ]
 }
