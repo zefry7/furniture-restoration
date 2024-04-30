@@ -4441,6 +4441,11 @@ p {
   color: var(--white);
 }
 
+@media (max-width: 768px) {
+  .works__info {
+    background-attachment: scroll, scroll;
+  }
+}
 @media (max-width: 768px) and (min-width: 1440px) {
   .works__info-text {
     max-width: 38.1944444444vw;
@@ -4856,7 +4861,6 @@ p {
   }
 }
 .techniques__block {
-  height: 100vh;
   background: url("./img/bg-2.jpeg") center/cover;
   background-attachment: fixed;
   display: flex;
@@ -4915,27 +4919,27 @@ p {
 }
 @media (min-width: 1440px) {
   .techniques__block {
-    max-height: 48.6111111111vw;
+    height: 48.6111111111vw;
   }
 }
 @media screen and (max-width: 1439px) and (min-width: 1280px) {
   .techniques__block {
-    max-height: calc(700px + 0 * (100vw - 1280px) / (1440 - 1280));
+    height: calc(700px + 0 * (100vw - 1280px) / (1440 - 1280));
   }
 }
 @media screen and (max-width: 1279px) and (min-width: 768px) {
   .techniques__block {
-    max-height: calc(700px + 0 * (100vw - 768px) / (1280 - 768));
+    height: calc(700px + 0 * (100vw - 768px) / (1280 - 768));
   }
 }
 @media screen and (max-width: 767px) and (min-width: 320px) {
   .techniques__block {
-    max-height: calc(700px + 0 * (100vw - 320px) / (768 - 320));
+    height: calc(700px + 0 * (100vw - 320px) / (768 - 320));
   }
 }
 @media (max-width: 375px) {
   .techniques__block {
-    max-height: 700px;
+    height: 700px;
   }
 }
 .techniques__text {
@@ -4943,6 +4947,11 @@ p {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .techniques__block {
+    background-attachment: scroll;
+  }
+}
 @media (max-width: 545px) and (min-width: 1440px) {
   .techniques__title {
     width: 20.8333333333vw;
@@ -6204,7 +6213,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, rgba(50, 50, 50, 0.4745098039) 50%, rgba(255, 255, 255, 0)), url("./img/bg-workshop.jpeg") 60% center/cover;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0)), url("./img/bg-workshop.jpeg") center/cover;
   background-attachment: scroll, fixed;
 }
 @media (min-width: 1440px) {
@@ -7700,6 +7709,9 @@ p {
   }
 }
 @media (max-width: 768px) {
+  .workshop__intro {
+    background-attachment: scroll, scroll;
+  }
   .workshop__select-grid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
@@ -7846,10 +7858,8 @@ p {
 }
 
 img {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 #root {

@@ -8,7 +8,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(to bottom, #32323279 50%, rgba(255, 255, 255, 0)), url("./img/bg-workshop.jpeg") 60% center/ cover;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0)), url("./img/bg-workshop.jpeg") center/ cover;
         background-attachment: scroll, fixed;
 
         &-subtitle {
@@ -256,6 +256,9 @@
 
 @media (max-width: 768px) {
     .workshop {
+        &__intro {
+            background-attachment: scroll, scroll;
+        }
         &__select {
             &-grid {
                 grid-template-columns: repeat(1, 1fr);

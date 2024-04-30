@@ -10,7 +10,6 @@
         justify-content: center;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0)), url("./img/bg-1.jpeg") 60% center/ cover;
         background-attachment: scroll, fixed;
-
         &-text {
             text-align: center;
             @include adap(margin-bottom, 100, 80, 62);
@@ -72,6 +71,7 @@
 @media (max-width: 768px) {
     .works {
         &__info {
+            background-attachment: scroll, scroll;
             &-text {
                 @include adap(max-width, 550);
             }
