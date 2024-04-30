@@ -43,6 +43,10 @@
         }
         &-button {
             background-color: var(--bg-services-item1);
+            &::after,
+            &::before {
+                color: var(--white);
+            }
         }     
     }
 }

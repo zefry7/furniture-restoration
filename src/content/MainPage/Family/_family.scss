@@ -46,6 +46,10 @@
     }
     &__button {
         background-color: var(--bg-family);
+        &::after,
+        &::before {
+            color: var(--white);
+        }
     }
     &__video-wrap {
         @extend .content;

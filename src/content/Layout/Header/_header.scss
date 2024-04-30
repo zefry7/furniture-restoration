@@ -136,22 +136,23 @@
             top: 0;
             z-index: 100;
             @include adap(width, 270);
-            min-height: min-content;
-            height: 100vh;
+            min-height: max-content;
+            height: 100%;
             background-color: var(--bg-main);
             right: -100%;
             transition: right linear 0.2s;
             @include adap(padding-right, 30);
             @include adap(padding-left, 30);
             @include adap(padding-top, 30);
-            @include adap(padding-bottom, 70);
-            overflow: scroll;
+            @include adap(padding-bottom, 30);
+            overflow: auto;
         }
         &__menu-burger_active {
             right: 0;
             transition: right linear 0.2s;
         }
         &__links {
+            height: auto;
             @include adap(gap, 18);
             flex-direction: column;
             align-items: flex-start;

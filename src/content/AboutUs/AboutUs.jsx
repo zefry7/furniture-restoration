@@ -3,30 +3,10 @@ import MyButton from "../../components/MyButton/MyButton";
 import SwiperConstructor from "../../components/SwiperConstructor/SwiperConstructor";
 import { UserContext } from "../..";
 
-function AboutUs(props) {
-    const data2 = useContext(UserContext)
-    const data = props.data
+function AboutUs() {
+    const data = useContext(UserContext).aboutUs
 
     document.title = "История создания мастерской NIKASON BRAND"
-
-    const settingSwiperMedia = {
-        spaceBetween: 30,
-        slidesPerView: 3,
-        breakpoints: {
-            375: {
-                slidesPerView: 1
-            },
-            480: {
-                slidesPerView: 2
-            },
-            768: {
-                slidesPerView: 3
-            },
-            1024: {
-                slidesPerView: 4
-            },
-        }
-    }
 
     return <section className="about-us">
         <div className="about-us__content">
@@ -61,11 +41,11 @@ function AboutUs(props) {
             <div className="about-us__media">
                 <h2 className="about-us__media-title">{data?.titles[2]}</h2>
                 <p className="about-us__media-text">{data?.mediaText}</p>
-                <SwiperConstructor setting={settingSwiperMedia} data={data?.mediaItems} />
+                <SwiperConstructor setting={"swiperMedia"} data={data?.mediaItems} />
             </div>
             <div className="feedback">
-                <h2 className="feedback__title">{data2.feedback.title}</h2>
-                <MyButton class="feedback__button" text={data2.feedback.button} />
+                <h2 className="feedback__title">{data?.feedback?.title}</h2>
+                <MyButton class="feedback__button" text={data?.feedback?.button} />
             </div>
         </div>
     </section>

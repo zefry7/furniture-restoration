@@ -89,6 +89,11 @@ p, a, li {
     }
     &__button {
         align-self: center;
+        &::after,
+        &::before {
+            color: var(--white);
+        }
+        
     }
 }
 

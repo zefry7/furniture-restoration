@@ -6,7 +6,7 @@
     font-family: "OS";
     line-height: 150%;
     font-weight: 700;
-    color: var(--button-text) !important;
+    color: var(--button-text);
     position: relative;
     transition: transform linear 0.1s;
     &::before {

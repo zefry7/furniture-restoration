@@ -1,6 +1,5 @@
 .about-us {
     &__content {
-        @extend .content;
         @include adap(padding-top, 120, 120, 60, 20);
         @include adap(padding-bottom, 243, 195, 150);
         display: flex;
@@ -9,6 +8,7 @@
         @include adap(border-width, 1);
     }
     &__title {
+        @extend .content;
         display: flex;
         flex-direction: column;
         align-self: center;
@@ -16,6 +16,7 @@
         text-align: center;
     }
     &__main-img {
+        @extend .content;
         @include adap(margin-bottom, 155, 110, 72);
         img {
             @include adap(min-height, 300);
@@ -26,9 +27,11 @@
         }
     }
     &__facts {
+        @extend .content;
         @include adap(margin-bottom, 160, 125, 90);
         display: flex;
         justify-content: space-between;
+        @include adap(gap, 10);
         &-text {
             display: flex;
             flex-direction: column;
@@ -46,17 +49,17 @@
     }
     
     &__info {
+        @extend .content;
         @include adap(margin-bottom, 160, 125, 90);
         display: flex;
         @include adap(gap, 40, 40, 40, 60);
         &-left {
             @include adap(min-width, 460, 460, 315);
             img {
-                @include adap(max-height, 460);
                 object-fit: cover;
                 object-position: center 30%;
                 width: 100%;
-                height: auto;
+                height: 100%;
             }
         }   
     }
@@ -80,6 +83,7 @@
         color: black;
     }
     &__idea {
+        @extend .content;
         @include adap(margin-bottom, 160, 125, 90);
         display: flex;
         flex-direction: column;
@@ -97,15 +101,20 @@
     &__media {
         @include adap(margin-bottom, 160, 125, 90);
         &-title {
+            @extend .content;
             @include adap(margin-bottom, 20);
-
         }
         &-text {
+            @extend .content;
             @include adap(margin-bottom, 100, 80, 60);
         }
+        .swiper {
+            @include adap(padding-right, 140, 30);
+            @include adap(padding-left, 140, 30);
+        }
     }
-    &__button {
-        align-self: center;
+    .feedback {
+        @extend .content;
     }
 }
 
@@ -113,6 +122,11 @@
     .about-us {
         &__info {
             flex-direction: column;
+            &-left {
+                img {
+                    @include adap(max-height, 460);
+                }      
+            }
         }
     }
 }
@@ -120,8 +134,8 @@
 @media (max-width: 768px) {
     .about-us {
         &__main-img {
-            @include adap(margin-left, -30);
-            @include adap(margin-right, -30);
+            padding: 0 !important;
+            width: 100%;
         }
         &__facts {
             flex-direction: column;

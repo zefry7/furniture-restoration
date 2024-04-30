@@ -352,6 +352,7 @@ export const data = {
             src: "./img/AboutUs/main.jpeg",
             alt: "Элемент оформления"
         },
+        settingSwiper: "swiperMedia",
         facts: [
             ["+10 лет", "На рынке по производству мебели"]
             ,
@@ -392,6 +393,10 @@ export const data = {
                 alt: "Пример поста из СМИ"
             }
         ],
+        feedback: {
+            title: "Оставьте заявку и мы с вами свяжемся",
+            button: "Оставить заявку"
+        }
     },
     workshop: {
         intro: {
@@ -430,6 +435,7 @@ export const data = {
         },
         portfolio: {
             title: "Портфолио",
+            settingSwiper: "swiperPortfolio",
             imgs: [
                 {
                     src: "./img/Workshop/portfolio-1.jpeg",
@@ -470,6 +476,7 @@ export const data = {
         },
         comment: {
             title: "Клиенты о нас",
+            settingSwiper: "swiperComment",
             img: [
                 {
                     src: "./img/Workshop/feedback-1.jpeg",
@@ -492,11 +499,10 @@ export const data = {
                     alt: "Мнение"
                 }
             ]
+        },
+        feedback: {
+            title: "Оставьте заявку и мы с вами свяжемся",
+            button: "Оставить заявку"
         }
-    },
-    feedback: {
-        title: "Оставьте заявку и мы с вами свяжемся",
-        button: "Оставить заявку"
     }
-
 }

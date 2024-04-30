@@ -30,6 +30,10 @@
     }
     &__button {
         @include adap(margin-bottom, 94, 82, 70);
+        &::after,
+        &::before {
+            color: var(--white);
+        }
     }
     &__socials {
         display: flex;

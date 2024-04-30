@@ -2,6 +2,7 @@
     &__intro {
         @include adap(padding-left, 30);
         @include adap(padding-right, 30);
+        @include adap(max-height, 700);
         height: 100vh;
         width: 100%;
         display: flex;
@@ -13,6 +14,7 @@
 
         &-subtitle {
             color: var(--white);
+            @include adap(margin-bottom, 0, 0, 0, 30);
         }
         &-title {
             @include adap(margin-bottom, 90, 75, 60);
@@ -22,32 +24,35 @@
             color: var(--white);
             span {
                 @include adap(margin-bottom, 25, 14, 3);
+                line-height: 120%;
             }
         }
         &-button {
             @include adap(width, 300);
             background-color: inherit;
-            color: var(--color-text-bt);
             &::after,
             &::before {
                 background-color: var(--white);
+                color: var(--color-text-bt);
             }
             &::before {
                 background-color: var(--gray);
+                color: var(--color-text-bt);
             }   
         }
     }
     &__wrap {
-        @extend .content;
         @include adap(padding-top, 160, 130, 100);
         @include adap(padding-bottom, 180, 165, 150);
     }
     &__select {
+        @extend .content;
         @include adap(margin-bottom, 160, 125, 90);
         &-title {
             @include adap(margin-bottom, 100, 80, 60);
         }
         &-grid {
+            width: 100%;
             align-self: center;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -87,6 +92,7 @@
         flex-direction: column;
         @include adap(margin-bottom, 160, 125, 90);
         &-title {
+            @extend .content;
             @include adap(margin-bottom, 100, 80, 60);
         }
         &-wrap {
@@ -121,6 +127,7 @@
             border: solid var(--black-line);
             @include adap(border-width, 1);
             background: url("./img/arrow.svg") center/ 100% 100% no-repeat;
+            cursor: pointer;
         }
         &-next {
             transform: rotateZ(180deg);
@@ -138,6 +145,7 @@
         }
     }
     &__stage {
+        @extend .content;
         @include adap(margin-bottom, 160, 125, 90);
         &-title {
             @include adap(margin-bottom, 100, 80, 60);
@@ -192,12 +200,11 @@
     }
     &__comment {
         @include adap(margin-bottom, 110, 85, 60);
-        @include adap(margin-left, -140, -30);
-        @include adap(margin-right, -140, -30);
         .swiper {
             @include adap(padding-left, 140, 30);
             @include adap(padding-right, 140, 30);
             &-slide {
+                cursor: pointer;
                 img {
                     @include adap(max-height, 400);
                     @include adap(max-width, 270);
@@ -210,6 +217,9 @@
             @include adap(margin-bottom, 100, 80, 60);
             @extend .content;
         }
+    }
+    & .feedback {
+        @extend .content;
     }
 }
 
@@ -224,18 +234,18 @@
             display: flex;
             flex-direction: column;
             &-grid {
-                grid-template-columns: repeat(2, 50%);
+                grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(3, auto);
             }
             &-item {
-                @include adap(width, 365);
+                @include adap(width, 300);
             }
         }
         &__stage {
             display: flex;
             flex-direction: column;
             &-grid {
-                grid-template-columns: repeat(2, 50%);
+                grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(3, auto);
             }
             &-item {
@@ -249,14 +259,14 @@
     .workshop {
         &__select {
             &-grid {
-                grid-template-columns: repeat(1, 100%);
+                grid-template-columns: repeat(1, 1fr);
                 grid-template-rows: auto;
                 justify-items: center;
             }
         }
         &__stage {
             &-grid {
-                grid-template-columns: repeat(1, 100%);
+                grid-template-columns: repeat(1, 1fr);
                 grid-template-rows: auto;
             }
         }
@@ -266,6 +276,15 @@
             }
             &-block {
                 width: 100%;
+            }
+            .swiper {
+                @include adap(padding-right, 140, 30);
+                @include adap(padding-left, 140, 30);
+            }
+            &-main-img,
+            &-prev,
+            &-next {
+                display: none;
             }
         }
     }
