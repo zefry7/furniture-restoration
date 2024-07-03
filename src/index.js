@@ -1,9 +1,10 @@
-import React, { createContext, useEffect } from 'react';
+import React, { createContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import "./styles/style.css"
 import { AboutUs, Layout, MainPage, MasterClassPage, Workshop } from "./content/import_ts"
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { data } from "./data";
+import { showObserver } from './styles/script/showObserver';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -11,7 +12,6 @@ const url = window.location.pathname.split("/")
 
 if (url.length <= 2) {
   window.location.href += "/"
-  console.log(123)
 }
 
 export const UserContext = createContext()

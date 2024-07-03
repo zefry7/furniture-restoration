@@ -7,6 +7,8 @@
         @extend .content;
         @include adap(padding-top, 84, 60, 40);
         @include adap(padding-bottom, 232, 155);
+        max-width: 1440px;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(3, auto);
         &-center {

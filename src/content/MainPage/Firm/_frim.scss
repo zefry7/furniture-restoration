@@ -3,6 +3,8 @@
         @extend .content;
         @include adap(padding-top, 160, 125, 90);
         @include adap(margin-bottom, 160, 125, 90);
+        max-width: 1440px;
+        margin: 0 auto;
     }
     &__title-1 {
         @include adap(font-size, 48, 40, 32);

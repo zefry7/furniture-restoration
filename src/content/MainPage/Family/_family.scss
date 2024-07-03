@@ -1,5 +1,7 @@
 .family {
     &__content {
+        max-width: 1440px;
+        margin: 0 auto;
         @include adap(margin-bottom, 200, 150, 100);
     }
     &__title {

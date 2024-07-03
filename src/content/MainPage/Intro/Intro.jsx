@@ -6,7 +6,7 @@ function Intro() {
     const data = useContext(UserContext)?.mainPage?.intro
     
     return (
-        <section className="intro">
+        <section className="intro section-obs">
             <div className="intro__content">
                 <div className="intro__main-img">
                     <img src={data?.mainImg?.src} alt={data?.mainImg?.alt} />
@@ -15,12 +15,12 @@ function Intro() {
                     <p className="intro__label">{data?.label}</p>
                     <h2 className="intro__title">{data?.title}</h2>
                     <p className="intro__subtitle">{data?.subtitle}</p>
-                    <MyButton class={"intro__button"} text={data?.button?.text} href={data?.button?.href}/>
+                    <MyButton class={"intro__button tab-index"} text={data?.button?.text} href={data?.button?.href}/>
                     <div className="intro__socials">
                         {data?.icons.map((value, index) => (
-                            <div className="intro__socials-item" key={index}>
+                            <button className="intro__socials-item tab-index" key={index}>
                                 <img src={value?.src} alt={value?.alt} />
-                            </div>
+                            </button>
                         ))}
                     </div>
                 </div>

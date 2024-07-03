@@ -38,6 +38,7 @@ img {
 
 #root {
     height: 100%;
+    margin: 0 auto;
     min-width: 375px;
 }
 
@@ -105,3 +106,13 @@ p, a, li {
 .scroll-lock {
     overflow: hidden;
 }
+
+
+section {
+    transition: opacity 0.4s linear;
+}
+.section-obs {
+    opacity: 0;
+}
+
+

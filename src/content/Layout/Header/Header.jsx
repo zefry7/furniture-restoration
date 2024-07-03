@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useCallback, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../..";
 
@@ -6,18 +6,25 @@ function Header() {
     const data = useContext(UserContext).header
 
     const burgerMenu = () => {
-
         const sizeWindow = window.innerWidth;
-        if(sizeWindow <= 768) {
+        let timeStyle = 0
+        if (sizeWindow <= 768) {
             const menuContent = document.querySelector(".header__menu-content")
             const blockContent = document.querySelector(".header__content")
             menuContent.classList.toggle("header__menu-burger_active")
-            blockContent.classList.toggle("header__black-bg")
             document.body.classList.toggle("scroll-lock")
+            blockContent.classList.toggle("header__black-bg")
+            if (menuContent.classList.contains("header__menu-burger_visible")) timeStyle = 200
+
+            setTimeout(() => {
+                menuContent.classList.toggle("header__menu-burger_visible")
+                blockContent.classList.toggle("header__content_background")
+            }, timeStyle)
         }
     }
 
     useEffect(() => {
+        const root = document.getElementById("root")
         window.addEventListener("resize", () => {
             const sizeWindow = window.innerWidth;
             if (sizeWindow > 768) {
@@ -28,6 +35,22 @@ function Header() {
                 document.body.classList.remove("scroll-lock")
             }
         })
+        document.addEventListener("click", (e) => {
+            const sizeWindow = window.innerWidth;
+            if (sizeWindow <= 768) {
+                if (e.target.classList.contains("header__content_background")) {
+                    burgerMenu()
+                }
+            }
+        })
+    }, [])
+
+    const tabIndexToggle = useCallback((str) => {
+        const list = document.getElementsByClassName("tab-index")
+
+        for (let elem of list) {
+            elem.setAttribute("tabIndex", str)
+        }
     }, [])
 
 
@@ -46,7 +69,7 @@ function Header() {
             <div className="header__content">
                 <div className="header__menu-content">
                     <div className="header__logo">
-                        <Link to='/' onClick={burgerMenu}><img src={data?.logo?.src} alt={data?.logo?.alt}  /></Link>
+                        <Link to='/' onClick={burgerMenu} tabIndex={0}><img src={data?.logo?.src} alt={data?.logo?.alt} /></Link>
                     </div>
                     <nav className="header__links">
                         {data?.links.map((value, index) => {
@@ -57,16 +80,16 @@ function Header() {
                             }
                         })}
                     </nav>
-                    <div className="header__menu-close" onClick={burgerMenu}>
+                    <button className="header__menu-close" onClick={() => { burgerMenu(); tabIndexToggle("0") }}>
                         <span></span>
                         <span></span>
-                    </div>
+                    </button>
                 </div>
-                <div className="header__menu-burger" onClick={burgerMenu}>
+                <button className="header__menu-burger tab-index" onClick={() => { burgerMenu(); tabIndexToggle("-1") }}>
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </header>
     )

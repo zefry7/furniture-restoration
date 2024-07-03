@@ -3,6 +3,8 @@
         @extend .content;
         @include adap(padding-bottom, 200, 150, 90);
         @include adap(padding-top, 200, 150, 90);
+        max-width: 1440px;
+        margin: 0 auto;
     }
     &__wrap-info {
         @include adap(padding-top, 92, 92, 60, 30);

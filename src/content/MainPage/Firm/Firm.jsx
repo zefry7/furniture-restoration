@@ -6,7 +6,7 @@ function Firm() {
     const data = useContext(UserContext).mainPage.firm
 
     return (
-        <section className="firm">
+        <section className="firm section-obs">
             <div className="firm__content">
                 <h2 className="firm__title-1">{data?.title1}</h2>
                 <div className="firm__row-text">
@@ -19,7 +19,7 @@ function Firm() {
                     {data?.items.map((value, index) => (
                         <div className="firm__item" key={index}>
                             <div className="firm__item-img">
-                                <img src={value?.img?.src} alt={value?.img?.alt}/>
+                                <img src={value?.img?.src} alt={value?.img?.alt} loading="lazy"/>
                             </div>
                             <p className="firm__item-text">{value?.name}</p>
                         </div>

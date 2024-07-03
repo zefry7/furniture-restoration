@@ -1,4 +1,8 @@
 .services {
+    &__content {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
     &__title {
         @extend .content;
         @include adap(margin-bottom, 100, 80, 60);

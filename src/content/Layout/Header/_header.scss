@@ -1,6 +1,10 @@
 .header {
+    @include adap(border-width, 1);
+    border-bottom: solid var(--black-line);
     &__content {
         @extend .content;
+        max-width: 1440px;
+        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -9,8 +13,21 @@
         @include adap(height, 140, 120, 100);
         &::before {
             content: "";
-            background-color: initial;
-            transition: background-color 0.2s linear;
+            display: inline-block;
+            position: fixed;
+            z-index: 10;
+            height: 100dvh;
+            width: 100vw;
+            top: 0;
+            right: -100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            transition: opacity 0.2s linear;
+            opacity: 0;
+        }
+        &_background {
+            &::before { 
+                right: 0%;
+            }
         }
     }
     &__links {
@@ -76,6 +93,10 @@
         @include adap(width, 100, 80);
         transform: translateX(-50%) translateY(-50%);
         cursor: pointer;
+        a {
+            height: 100%;
+            display: inline-block;
+        }
         img {
             width: 100%;
             height: auto;
@@ -137,7 +158,7 @@
             z-index: 100;
             @include adap(width, 270);
             min-height: max-content;
-            height: 100%;
+            height: 100dvh;
             background-color: var(--bg-main);
             right: -100%;
             transition: right linear 0.2s;
@@ -146,10 +167,14 @@
             @include adap(padding-top, 30);
             @include adap(padding-bottom, 30);
             overflow: auto;
+            visibility: hidden;
         }
         &__menu-burger_active {
             right: 0;
             transition: right linear 0.2s;
+        }
+        &__menu-burger_visible {
+            visibility: visible;
         }
         &__links {
             height: auto;
@@ -170,15 +195,11 @@
             display: flex;
         }
         &__black-bg{
+            .header__menu-burger {
+                visibility: hidden;
+            }
             &::before {
-                content: "";
-                display: inline-block;
-                position: fixed;
-                height: 115vh;
-                width: 100vw;
-                top: 0;
-                left: 0;
-                background-color: rgba(0, 0, 0, 0.2);
+                opacity: 1;
             }
         }
     }
