@@ -79,7 +79,7 @@ function Header() {
                             if (!value?.dataSection) {
                                 return <Link to={value?.href} className="header__link" onClick={(e) => {burgerMenu(); moveToBlock(e); tabIndexToggle(0)}} key={index}>{value?.text}</Link>
                             } else {
-                                return <Link to={value?.href} data-section={value?.dataSection} className="header__link" onClick={(e) => {moveToBlock(e); tabIndexToggle(0)}} key={index}>{value?.text}</Link>
+                                return <Link to={value?.href} data-section={value?.dataSection} className="header__link" onClick={(e) => {moveToBlock(e); burgerMenu(); tabIndexToggle(0)}} key={index}>{value?.text}</Link>
                             }
                         })}
                     </nav>

@@ -13,8 +13,8 @@
         }
     }
     &__info {
-        @include adap(padding-right, 123, 80, 20);
-        @include adap(padding-left, 40, 40, 30);
+        @include adap(padding-right, 123, 80, 25);
+        @include adap(padding-left, 40, 40, 25);
         @include adap(padding-top, 200, 150, 40);
         @include adap(padding-bottom, 100, 70, 40);
     }
