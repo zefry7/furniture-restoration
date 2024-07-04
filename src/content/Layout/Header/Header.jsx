@@ -58,8 +58,6 @@ function Header() {
 
     const moveToBlock = (e) => {
         var attr = e.target.getAttribute("data-section");
-        burgerMenu()
-        console.log(123);
         const a = document.getElementById(attr)?.offsetTop || 0
         window.scrollTo({
             top: a,
