@@ -107,10 +107,11 @@ p, a, li {
     overflow: hidden;
 }
 
-
+.opacity-effect,
 section {
-    transition: opacity 0.4s linear;
+    transition: opacity 0.3s linear;
 }
+
 .section-obs {
     opacity: 0;
 }

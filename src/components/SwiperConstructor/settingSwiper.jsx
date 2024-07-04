@@ -15,7 +15,7 @@ const swiperComment = {
         1024: {
             slidesPerView: 4
         },
-        1920: {
+        1440: {
             slidesPerView: 5
         }
     }

@@ -2,7 +2,7 @@
     &__intro {
         @include adap(padding-left, 30);
         @include adap(padding-right, 30);
-        @include adap(height, 700);
+        height: 100dvh;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -47,6 +47,8 @@
     &__select {
         @extend .content;
         @include adap(margin-bottom, 160, 125, 90);
+        max-width: 1440px;
+        margin: 0 auto;
         &-title {
             @include adap(margin-bottom, 100, 80, 60);
         }
@@ -87,6 +89,8 @@
         }
     }
     &__portfolio {
+        max-width: 1440px;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         @include adap(margin-bottom, 160, 125, 90);
@@ -145,7 +149,9 @@
     }
     &__stage {
         @extend .content;
-        @include adap(margin-bottom, 160, 125, 90);
+        max-width: 1440px;
+        margin: 0 auto;
+        @include adap(margin-bottom, 160, 125, 90);    
         &-title {
             @include adap(margin-bottom, 100, 80, 60);
         }
@@ -198,6 +204,8 @@
         }
     }
     &__comment {
+        max-width: 1440px;
+        margin: 0 auto;
         @include adap(margin-bottom, 110, 85, 60);
         .swiper {
             @include adap(padding-left, 140, 30);
@@ -218,6 +226,8 @@
         }
     }
     & .feedback {
+        max-width: 1440px;
+        margin: 0 auto;
         @extend .content;
     }
 }

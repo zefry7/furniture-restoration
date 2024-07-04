@@ -13,7 +13,7 @@ function Footer() {
     }
 
     return (
-        <footer className="footer" id="section-footer">
+        <footer className="footer opacity-effect section-obs" id="section-footer">
             <div className="footer__content">
                 <p className="footer__inn">
                     <span>{data?.ip}</span>

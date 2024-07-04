@@ -18,7 +18,7 @@ export default memo(function SwiperConstructor(props) {
     >
       {data?.map((v, i) => (
         <SwiperSlide key={i}>
-          <img src={v?.src} alt={v?.alt} />
+          <img src={v?.src} alt={v?.alt} loading='lazy'/>
         </SwiperSlide>
       ))}
     </Swiper>

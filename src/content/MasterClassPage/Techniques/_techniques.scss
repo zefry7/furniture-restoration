@@ -5,6 +5,8 @@
     &__info {
         @extend .content;
         @include adap(margin-bottom, 160, 130, 100);
+        max-width: 1440px;
+        margin: 0 auto;
     }
     &__title {
         @include adap(margin-bottom, 100, 100, 70);
@@ -50,7 +52,7 @@
     &__block {
         @include adap(padding-left, 245, 135, 30);
         @include adap(padding-right, 245, 135, 30);
-        @include adap(height, 700);
+        height: 100dvh;
         background: url("./img/bg-2.jpeg") center/ cover;
         background-attachment: fixed;
         display: flex;
@@ -58,6 +60,7 @@
         align-items: center;
     }
     &__text {
+        max-width: 950px;
         color: var(--white);
         text-align: center;
     }
